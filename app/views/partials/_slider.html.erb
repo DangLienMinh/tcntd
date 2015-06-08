@@ -1,0 +1,42 @@
+<script>
+    jQuery(function(){
+
+        jQuery('#camera_wrap').camera({
+            fx: 'random',
+            transPeriod: 500,
+            time: 2000,
+            height: '400',
+            loader: 'false',
+            pagination: true,
+            thumbnails: true,
+            hover: true,
+            playPause: true,
+            navigation: true,
+            opacityOnGrid: false,
+            imagePath: 'assets/images/'
+
+        });
+
+    });
+
+</script>
+<header id="head">
+  <div class="container">
+    <div class="heading-text">
+      <h1 class="animated flipInY delay1">Truong trung cap thu duc</h1>
+      <p>Dao tao nhan tai vung buoc tuong lai</p>
+    </div>
+    <div class="fluid_container">
+      <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap">
+        <div data-thumb="<%= image_url 'slides/img1.jpg' %>" data-src="<%= image_url 'slides/img1.jpg' %>">
+          <h2>We develop.</h2>
+        </div>
+        <div data-thumb="<%= image_url 'slides/img2.jpg' %>" data-src="<%= image_url 'slides/img2.jpg' %>">
+        </div>
+        <div data-thumb="<%= image_url 'slides/img3.jpg' %>" data-src="<%= image_url 'slides/img3.jpg' %>">
+        </div>
+      </div><!-- #camera_wrap_3 -->
+
+    </div><!-- .fluid_container -->
+  </div>
+</header>

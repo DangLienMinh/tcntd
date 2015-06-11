@@ -7,6 +7,8 @@ gem 'rails', '4.2.1'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'pg'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'autoprefixer-rails'
 gem 'ransack'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
@@ -48,4 +50,5 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pg'
 end

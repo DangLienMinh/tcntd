@@ -1,26 +1,56 @@
 ActiveAdmin.register_page "Dashboard" do
 
-    content :title=>"Recent Posts" do
-        table_for Post.order("id desc").limit(15) do
-            column :id
-            column "Post title",:title do |post|
-                link_to post.title,[:admin,post]
-            end
-            column :category,:sortable => :category
-            column :created_at
-            strong {link_to "Show all Posts",:admin_posts}
+  menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
+
+  content title: proc{ I18n.t("active_admin.dashboard") } do
+     columns do
+       column do
+         panel "Bài viết gần đây" do
+           table_for Post.order("id desc").limit(15) do
+             column :id
+             column "Tiêu đề",:title do |post|
+               link_to post.title,[:admin,post]
+             end
+             column "Tác giả",:admin_user
+             column "Loại tin",:category,:sortable => :category
+             column "Ngày tạo",:created_at
+           end
+           strong {link_to "Hiện tất cả bài viết",:admin_posts}
         end
+      end
 
-        table_for Category.order("id desc").limit(15) do
+    
+      
+
+      column do
+        panel "Loại tin" do
+          table_for Category.order("id desc").limit(15) do
             column :id
-            column "category name",:name do |category|
-                link_to category.name,[:admin,category]
+            column "Tên loại tin",:name do |category|
+              link_to category.name,[:admin,category]
             end
+            column "Ngày tạo",:created_at
+          end
+          strong {link_to "Hiện tất cả Loại tin",:admin_categories}
+       end
+       end
 
-            strong {link_to "Show all Categories",:admin_categories}
-        end
-    end
 
+       column do
+        panel "Yêu cầu liên hệ" do
+          table_for Contact.order("id desc").limit(15) do
+            column :id
+            column "Email",:email do |contact|
+              link_to contact.name,[:admin,contact]
+            end
+            column "Điện thoại ",:phone
+            column "Nội dung",:message
 
+          end
+          strong {link_to "Hiện tất cả liên hệ",:admin_contacts}
+       end
+       end
+     end
 
+  end # content
 end

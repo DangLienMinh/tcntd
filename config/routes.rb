@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
+  get 'contacts/new'
+
+
+
+  get 'posts/show'
+  get 'home/contact'
   get 'pages/gioithieu'
 
   get 'pages/lienhe'
@@ -10,9 +16,9 @@ Rails.application.routes.draw do
   get 'pages/csvc'
 
   get 'pages/kiemdinh'
-
+ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  
   get 'home/index'
 
   get 'posts/new'
@@ -42,8 +48,11 @@ Rails.application.routes.draw do
   get 'categories/destroy'
 
   get 'categories/index'
-  resources :post
+  resources :home
   resources :categories
+  resources :post
+  resources :contacts
+  resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

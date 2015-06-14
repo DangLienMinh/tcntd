@@ -1,2 +1,57 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+# encoding: utf-8
+<header id="head" class="secondary">
+  <div class="container">
+    <h1>TIN TỨC</h1>
+
+  </div>
+</header>
+
+
+<section class="container">
+  <div class="row">
+    <!-- main content -->
+    <section class="col-sm-8 maincontent" >
+      <h3><%= @post.title %></h3>
+      <small><%= @post.created_at.strftime("%b %d. %Y") %></small>
+      <p>Create By  :<%= @post.admin_user.name %></p>
+      <p><%= raw(@post.content) %></p>
+
+
+    </section>
+    <aside class="col-sm-4 sidebar sidebar-right box-shadow box-radius">
+
+      <div class="panel">
+        <h4><%= @category.name %></h4>
+        <ul class="list-unstyled list-spaces">
+
+          <% @allpost.each do |post| %>
+              <li><%= link_to post.title,posts_show_path(:id=>post.id) %></li>
+          <% end %>
+
+
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

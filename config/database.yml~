@@ -10,7 +10,7 @@ default: &default
   database: trungcapnghe
   host: localhost
   username: postgres
-  password: Minh11520232
+  password: 123456
   pool: 5
   timeout: 5000
 
@@ -21,7 +21,7 @@ development:
   database: trungcapnghe
   host: localhost
   username: postgres
-  password: Minh11520232
+  password: 123456
   pool: 5
   timeout: 5000
 
@@ -38,6 +38,6 @@ production:
   database: trungcapnghe
   host: localhost
   username: postgres
-  password: Minh11520232
+  password: 123456
   pool: 5
   timeout: 5000

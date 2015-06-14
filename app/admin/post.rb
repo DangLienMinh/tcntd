@@ -23,10 +23,10 @@ ActiveAdmin.register Post do
     # column :title do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
-    column :title 
-    column "Author",:admin_user
-    column :category
-    column :created_at
+    column "Tiêu đề",:title 
+    column "Tác giả",:admin_user
+    column "Loại tin",:category
+    column "Ngày tạo",:created_at
     actions
   end
 
@@ -35,7 +35,9 @@ ActiveAdmin.register Post do
       f.input :title, :label => "Tiêu đề"
       f.input :summary, :label => "Tóm tắt"
       f.input :category, :label => "Loại tin"
-      f.file_field :pic, :label => "Image"
+      #f.file_field :pic, :label => "Hình ảnh"
+      f.input :pic, :as => :file, :label => "Hình ảnh"
+      #f.input :_destroy, :as=>:boolean, :required => false, :label => 'Remove image'
       f.input :admin_user, :label => "Tác giả", :selected => current_admin_user.id
       f.cktext_area :content, :class => 'ckeditor', :label => "Nội dung"
       end
@@ -65,5 +67,22 @@ ActiveAdmin.register Post do
     end
      active_admin_comments
    end
+
+   
+  form do |f|
+    inputs 'Details' do
+      input :title
+      input :published_at, label: "Publish Post At"
+      li "Created at #{f.object.created_at}" unless f.object.new_record?
+      input :category
+    end
+    panel 'Markup' do
+      "The following can be used in the content below..."
+    end
+    inputs 'Content', :body
+    para "Press cancel to return to the list without saving."
+    actions
+  end
+  
 
 end

@@ -1,8 +1,9 @@
 ActiveAdmin.register_page "Dashboard" do
+  
+  menu priority: 1, label: "Quản lý chung"
 
-  menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
-
-  content title: proc{ I18n.t("active_admin.dashboard") } do
+  content title: "Quản lý chung" do
+    if current_admin_user.is_admin==1
      columns do
        column do
          panel "Bài viết gần đây" do
@@ -18,9 +19,6 @@ ActiveAdmin.register_page "Dashboard" do
            strong {link_to "Hiện tất cả bài viết",:admin_posts}
         end
       end
-
-    
-      
 
       column do
         panel "Loại tin" do
@@ -52,5 +50,6 @@ ActiveAdmin.register_page "Dashboard" do
        end
      end
 
-  end # content
+    end # content
+  end
 end

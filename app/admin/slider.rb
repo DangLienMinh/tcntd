@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Slider do
-
+  actions :all, except: [:destroy,:new]
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -20,6 +20,7 @@ ActiveAdmin.register Slider do
       params.require(:slider).permit(:name,:infobig, :infosmall, :pic1, :pic2, :pic3,  :pic4,  :pic5)
     end
   end
+
 
   index do |s|
     # column :title do

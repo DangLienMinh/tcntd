@@ -14,6 +14,7 @@
             playPause: true,
             navigation: true,
             opacityOnGrid: false,
+            slideOn: 'next',
             imagePath: 'assets/images/'
 
         });
@@ -23,19 +24,16 @@
 </script>
 <header id="head">
   <div class="container">
-    <div class="heading-text">
-      <h1 class="animated flipInY delay1">TRƯỜNG TRUNG CẤP NGHỀ THỦ ĐỨC</h1>
-      <p>Đào tạo nhân tài - Vũng bước tương lai</p>
-    </div>
+
+
     <div class="fluid_container">
       <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap">
-        <div data-thumb="<%= image_url 'slides/thumbs/img1.jpg' %>" data-src="<%= image_url 'slides/img1.jpg' %>">
-          <h2>We develop.</h2>
+        <% all_slider.each do |s| %>
+        <div  data-thumb="<%= image_tag s.picture.url(:thumb) %>" data-src="<%= image_tag s.picture.url %>">
+          <div class="camera_caption"><%= s.topcaption %></div>
         </div>
-        <div data-thumb="<%= image_url 'slides/thumbs/img2.jpg' %>" data-src="<%= image_url 'slides/img2.jpg' %>">
-        </div>
-        <div data-thumb="<%= image_url 'slides/thumbs/img3.jpg' %>" data-src="<%= image_url 'slides/img3.jpg' %>">
-        </div>
+        <% end %>
+
       </div><!-- #camera_wrap_3 -->
 
     </div><!-- .fluid_container -->

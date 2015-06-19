@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :all_posts_tuyen_sinh
 helper_method :all_posts_tuyen_dung
 helper_method :all_posts_tin_tuc
+  helper_method :all_slider
   def all_categories
     @categories=Category.all
 
@@ -34,6 +35,11 @@ helper_method :all_posts_tin_tuc
     @category=Category.find('4')
     @post=@category.posts.order(:created_at).limit(5)
 
+
+  end
+
+  def all_slider
+    @slider=Slidercontent.all
 
   end
 end

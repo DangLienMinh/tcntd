@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 201510611063140) do
+ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,34 @@ ActiveRecord::Schema.define(version: 201510611063140) do
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
     t.integer  "department_id"
+  end
+
+  create_table "sliders", force: :cascade do |t|
+    t.string   "name"
+    t.string   "infobig"
+    t.string   "infosmall"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "pic1_file_name"
+    t.string   "pic1_content_type"
+    t.integer  "pic1_file_size"
+    t.datetime "pic1_updated_at"
+    t.string   "pic2_file_name"
+    t.string   "pic2_content_type"
+    t.integer  "pic2_file_size"
+    t.datetime "pic2_updated_at"
+    t.string   "pic3_file_name"
+    t.string   "pic3_content_type"
+    t.integer  "pic3_file_size"
+    t.datetime "pic3_updated_at"
+    t.string   "pic4_file_name"
+    t.string   "pic4_content_type"
+    t.integer  "pic4_file_size"
+    t.datetime "pic4_updated_at"
+    t.string   "pic5_file_name"
+    t.string   "pic5_content_type"
+    t.integer  "pic5_file_size"
+    t.datetime "pic5_updated_at"
   end
 
 end

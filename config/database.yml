@@ -10,7 +10,7 @@ default: &default
   database: trungcapnghe
   host: localhost
   username: postgres
-  password: trungcapnghe
+  password: 25251325
   pool: 5
   timeout: 5000
 
@@ -20,8 +20,8 @@ development:
   encoding: unicode
   database: trungcapnghe
   host: localhost
-  username: trungcapnghe
-  password: trungcapnghe
+  username: postgres
+  password: 25251325
   pool: 5
   timeout: 5000
 
@@ -37,7 +37,7 @@ production:
   encoding: unicode
   database: trungcapnghe
   host: localhost
-  username: trungcapnghe
-  password: trungcapnghe
+  username: postgres
+  password: 25251325
   pool: 5
   timeout: 5000

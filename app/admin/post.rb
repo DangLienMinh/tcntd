@@ -21,17 +21,32 @@ ActiveAdmin.register Post do
     def scoped_collection
       # some stuffs
       if current_admin_user.department_id==1
-        super.where(:category_id=>10)
+        @department=AdminUser.where(department_id: 1).select("id")
+        super.where(:admin_user_id=>@department)
       elsif current_admin_user.department_id==2
-        super.where(:category_id=>8)
+        @department=AdminUser.where(department_id: 2).select("id")
+        super.where(:admin_user_id=>@department)
+        #super.where(:category_id=>8)
       elsif current_admin_user.department_id==3
-        super.where(:category_id=>7)
+        @department=AdminUser.where(department_id: 3).select("id")
+        super.where(:admin_user_id=>@department)
+        #super.where(:category_id=>7)
       elsif current_admin_user.department_id==4
-        super.where(:category_id=>6)
+        @department=AdminUser.where(department_id: 4).select("id")
+        super.where(:admin_user_id=>@department)
+        #super.where(:category_id=>6)
       elsif current_admin_user.department_id==5
-        super.where(:category_id=>5)
+        @department=AdminUser.where(department_id: 5).select("id")
+        super.where(:admin_user_id=>@department)
+        #super.where(:category_id=>5)
       else
-        super.all
+        if current_admin_user.is_admin==1
+          super.all
+        else
+          @category=Category.all.limit(4)
+          super.where(:category_id=>@category)
+        end
+        
       end
     end
     before_filter { @page_title = "Thêm bài viết" }
@@ -65,18 +80,12 @@ ActiveAdmin.register Post do
       if current_admin_user.is_admin?
         #f.input :category, :label => "Loại tin", :collection => Category.where(:id=>[1,2,3,4])
         f.input :category, :label => "Loại tin"
-      elsif current_admin_user.department_id==1
-        f.input :category, :label => "Loại tin", :selected => 10,:input_html => { disabled: true }
-      elsif current_admin_user.department_id==2
-        f.input :category, :label => "Loại tin", :selected => 8,:input_html => { disabled: true }
-      elsif current_admin_user.department_id==3
-        f.input :category, :label => "Loại tin", :selected => 7,:input_html => { disabled: true }
-      elsif current_admin_user.department_id==4
-        f.input :category, :label => "Loại tin", :selected => 6,:input_html => { disabled: true }
-      elsif current_admin_user.department_id==5
-        f.input :category, :label => "Loại tin", :selected => 5,:input_html => { disabled: true }
+      elsif current_admin_user.department_id.between?(1,5)
+        f.input :category, :label => "Loại tin", :selected => 5
+      else
+        f.input :category, :label => "Loại tin",collection: Category.all.limit(4)
       end
-      f.input :admin_user, :label => "Tác giả", :selected => current_admin_user.id,:input_html => { disabled: true }
+      f.input :admin_user, :label => "Tác giả", :selected => current_admin_user.id
       f.input :pic, :as => :file, :label => "Hình ảnh",:hint=>image_tag(f.object.pic.url(:thumb))
       f.input :summary, :label => "Tóm tắt"
       f.cktext_area :content, :class => 'ckeditor', :label => "Nội dung"

@@ -1,5 +1,5 @@
 ActiveAdmin.register_page "Dashboard" do
-  
+  menu :if => proc{ current_admin_user.is_admin? }
   menu priority: 1, label: "Quản lý chung"
 
   content title: "Quản lý chung" do
@@ -49,7 +49,24 @@ ActiveAdmin.register_page "Dashboard" do
        end
        end
      end
-
+    else
+      columns do
+      column do
+         panel "Bài viết gần đây" do
+            #@department=Department.where(id: current_admin_user.department_id).select("id")
+            table_for Post.where(department_id: current_admin_user.department_id).order("id desc").limit(15) do
+             column :id
+             column "Tiêu đề",:title do |post|
+               link_to post.title,[:admin,post]
+             end
+             column "Tác giả",:admin_user
+             column "Loại tin",:category,:sortable => :category
+             column "Ngày tạo",:created_at
+           end
+           strong {link_to "Hiện tất cả bài viết",:admin_posts}
+        end
+      end
+      end
     end # content
   end
 end

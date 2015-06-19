@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Slidercontent do
-
+menu :if => proc{ current_admin_user.is_admin? }
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #

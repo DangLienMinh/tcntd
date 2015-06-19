@@ -29,8 +29,8 @@
     <div class="fluid_container">
       <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap">
         <% all_slider.each do |s| %>
-        <div  data-thumb="<%= image_tag s.picture.url(:thumb) %>" data-src="<%= image_tag s.picture.url %>">
-          <div class="camera_caption"><%= s.topcaption %></div>
+        <div  data-thumb="<%= image_url 'slides/thumbs/img1.jpg' %>" data-src="<%= image_url 'slides/img1.jpg' %>">
+          <div class="camera_caption"><%=s.topcaption %></div>
         </div>
         <% end %>
 

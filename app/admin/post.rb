@@ -16,37 +16,33 @@ ActiveAdmin.register Post do
 
   controller do
     def permitted_params
-      params.permit post: [:title, :pic, :summary, :content, :category_id, :admin_user_id]
+      params.permit post: [:title, :pic, :summary, :content, :category_id, :admin_user_id, :department_id]
     end
     def scoped_collection
       # some stuffs
       if current_admin_user.department_id==1
-        @department=AdminUser.where(department_id: 1).select("id")
-        super.where(:admin_user_id=>@department)
+        @department=Department.where(id: 1).select("id")
+        super.where(:department_id=>@department)
       elsif current_admin_user.department_id==2
-        @department=AdminUser.where(department_id: 2).select("id")
-        super.where(:admin_user_id=>@department)
+        @department=Department.where(id: 2).select("id")
+        super.where(:department_id=>@department)
         #super.where(:category_id=>8)
       elsif current_admin_user.department_id==3
-        @department=AdminUser.where(department_id: 3).select("id")
-        super.where(:admin_user_id=>@department)
+        @department=Department.where(id: 3).select("id")
+        super.where(:department_id=>@department)
         #super.where(:category_id=>7)
       elsif current_admin_user.department_id==4
-        @department=AdminUser.where(department_id: 4).select("id")
-        super.where(:admin_user_id=>@department)
+        @department=Department.where(id: 4).select("id")
+        super.where(:department_id=>@department)
         #super.where(:category_id=>6)
       elsif current_admin_user.department_id==5
-        @department=AdminUser.where(department_id: 5).select("id")
-        super.where(:admin_user_id=>@department)
+        @department=Department.where(id: 5).select("id")
+        super.where(:department_id=>@department)
         #super.where(:category_id=>5)
       else
         if current_admin_user.is_admin==1
           super.all
-        else
-          @category=Category.all.limit(4)
-          super.where(:category_id=>@category)
         end
-        
       end
     end
     before_filter { @page_title = "Thêm bài viết" }
@@ -80,12 +76,14 @@ ActiveAdmin.register Post do
       if current_admin_user.is_admin?
         #f.input :category, :label => "Loại tin", :collection => Category.where(:id=>[1,2,3,4])
         f.input :category, :label => "Loại tin"
-      elsif current_admin_user.department_id.between?(1,5)
-        f.input :category, :label => "Loại tin", :selected => 5
+        f.input :admin_user, :label => "Tác giả", :selected => current_admin_user.id
+        f.input :department, :label => "Phòng ban"
       else
-        f.input :category, :label => "Loại tin",collection: Category.all.limit(4)
+        f.input :category, :label => "Loại tin"
+        f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id
+        f.input :department, :label => "Phòng ban", collection: Department.where(id: current_admin_user.department_id), :selected => current_admin_user.department_id
       end
-      f.input :admin_user, :label => "Tác giả", :selected => current_admin_user.id
+      
       f.input :pic, :as => :file, :label => "Hình ảnh",:hint=>image_tag(f.object.pic.url(:thumb))
       f.input :summary, :label => "Tóm tắt"
       f.cktext_area :content, :class => 'ckeditor', :label => "Nội dung"
@@ -107,6 +105,9 @@ ActiveAdmin.register Post do
         end
         row "Loại tin" do
           s.category
+        end
+        row "Phòng ban" do
+          s.department
         end
         row "Tác giả" do
           s.admin_user

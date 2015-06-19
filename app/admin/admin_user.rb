@@ -33,7 +33,7 @@ ActiveAdmin.register AdminUser do
       f.input :password_confirmation,:label => "Nhập lại mật khẩu"
       f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]]
       
-      f.input :department,:label => "Phòng ban"
+      f.input :department,:label => "Phòng ban", :include_blank => false
     end
     f.actions
   end

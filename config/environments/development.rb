@@ -40,4 +40,6 @@ Rails.application.configure do
   config.assets.initialize_on_precompile = false
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  ENV['RECAPTCHA_PUBLIC_KEY'] = '6LfonQgTAAAAAMjeJO9Kl_J5cVrV-xJecT3JGo-f'
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6LfonQgTAAAAAHcqQ_h41bKIEIPfowNand0DVc3C'
 end

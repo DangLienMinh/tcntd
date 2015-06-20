@@ -107,6 +107,15 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.integer  "department_id",    null: false
   end
 
+  create_table "simple_captcha_data", force: :cascade do |t|
+    t.string   "key",        limit: 40
+    t.string   "value",      limit: 6
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "simple_captcha_data", ["key"], name: "idx_key", using: :btree
+
   create_table "slidercontents", force: :cascade do |t|
     t.string   "link"
     t.string   "topcaption"
@@ -118,34 +127,6 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-  end
-
-  create_table "sliders", force: :cascade do |t|
-    t.string   "name"
-    t.string   "infobig"
-    t.string   "infosmall"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "pic1_file_name"
-    t.string   "pic1_content_type"
-    t.integer  "pic1_file_size"
-    t.datetime "pic1_updated_at"
-    t.string   "pic2_file_name"
-    t.string   "pic2_content_type"
-    t.integer  "pic2_file_size"
-    t.datetime "pic2_updated_at"
-    t.string   "pic3_file_name"
-    t.string   "pic3_content_type"
-    t.integer  "pic3_file_size"
-    t.datetime "pic3_updated_at"
-    t.string   "pic4_file_name"
-    t.string   "pic4_content_type"
-    t.integer  "pic4_file_size"
-    t.datetime "pic4_updated_at"
-    t.string   "pic5_file_name"
-    t.string   "pic5_content_type"
-    t.integer  "pic5_file_size"
-    t.datetime "pic5_updated_at"
   end
 
 end

@@ -10,7 +10,7 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right mainNav">
-        <li class="active"><a href="<%= root_path  %>">Trang Chủ</a></li>
+        <li><a href="<%= root_path  %>">Trang Chủ</a></li>
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown">Giới Thiệu <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -24,10 +24,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phòng Ban <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="phong-dao-tao.html">Phòng Đào Tạo</a></li>
-            <li><a href="#">Thư ngỏ của Hiệu trưởng</a></li>
-            <li><a href="#">Dummy Link2</a></li>
-            <li><a href="#">Dummy Link3</a></li>
+            <% all_departments.each do |depr| %>
+              <li><%= link_to depr.name,departments_show_path(:id=>depr.id) %></li>
+            <% end %>
           </ul>
         </li>
 

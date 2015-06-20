@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'departments/phongdaotao'
+
+  get 'departments/phongtaivu'
+
+  get 'departments/tochuchanhchinh'
+
+  get 'departments/quanlihs'
+
+  get 'departments/qttb'
+
   mount Ckeditor::Engine => '/ckeditor'
   get 'contacts/new'
 
@@ -48,11 +58,25 @@ ActiveAdmin.routes(self)
   get 'categories/destroy'
 
   get 'categories/index'
+  get 'departments/new'
+
+  get 'departments/edit'
+
+  get 'departments/create'
+
+  get 'departments/update'
+
+  get 'departments/show'
+
+  get 'departments/destroy'
+
+  get 'departments/index'
   resources :home
   resources :categories
   resources :post
   resources :contacts
   resources :posts
+  resources :departments
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

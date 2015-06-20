@@ -39,7 +39,7 @@ helper_method :all_posts_tin_tuc
   end
 
   def all_slider
-    @slider=Slidercontent.all
+    @slider=Slidercontent.order('ordernum asc')
 
   end
 end

@@ -86,23 +86,24 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "summary"
-    t.text     "content"
+    t.string   "title",            null: false
+    t.string   "summary",          null: false
+    t.text     "content",          null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "category_id"
-    t.integer  "admin_user_id"
+    t.integer  "category_id",      null: false
+    t.integer  "admin_user_id",    null: false
     t.string   "pic_file_name"
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
-    t.integer  "department_id"
+    t.integer  "department_id",    null: false
   end
 
   create_table "slidercontents", force: :cascade do |t|

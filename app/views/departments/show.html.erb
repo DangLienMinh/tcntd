@@ -25,7 +25,7 @@
                             <ul class="list-unstyled list-spaces">
                                 <% cate.posts.where("department_id=?",@department.id).each do |post| %>
                                   <li><%= link_to post.title,posts_show_path(:id=>post.id) %><br>
-                                    <span class="small text-muted">post.summary</span>
+                                    <span class="small text-muted"><%= post.summary %></span>
                                   </li>
                                 <% end %>
                             </ul>

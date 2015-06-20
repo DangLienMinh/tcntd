@@ -1,0 +1,48 @@
+
+ 	<header id="head" class="secondary">
+            <div class="container">
+                    <h1><%= @department.name%></h1>
+                    <p><%= @department.slogan%></p>
+                </div>
+    </header>
+
+
+    <!-- container -->
+    <section class="container">
+        <div class="row">
+            <!-- main content -->
+            <section class="col-sm-8 maincontent">
+                <%= raw @department.description %>
+            </section>
+            <!-- /main -->
+
+            <!-- Sidebar -->
+            <aside class="col-sm-4 sidebar sidebar-right">
+
+                <div class="panel  box-shadow box-radius">
+                    <h4>Thông báo</h4>
+                    <ul class="list-unstyled list-spaces">
+                    	<% @thongbao.each do |post| %>
+			              <li><%= link_to post.title,posts_show_path(:id=>post.id) %><br>
+			              	<span class="small text-muted">post.summary</span>
+			              </li>
+			            <% end %>
+                    </ul>
+                </div>
+                <div class="panel  box-shadow box-radius">
+                    <h4>Tin tức</h4>
+                    <ul class="list-unstyled list-spaces">
+                        <% @tintuc.each do |post| %>
+			              <li><%= link_to post.title,posts_show_path(:id=>post.id) %><br>
+			              	<span class="small text-muted">post.summary</span>
+			              </li>
+			            <% end %>
+                    </ul>
+                </div>
+
+            </aside>
+            <!-- /Sidebar -->
+
+        </div>
+    </section>
+    <!-- /container -->

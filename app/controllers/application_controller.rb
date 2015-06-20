@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :all_categories
+  helper_method :all_departments
   helper_method :all_posts_thong_bao
   helper_method :all_posts_tuyen_sinh
 helper_method :all_posts_tuyen_dung
@@ -18,6 +19,11 @@ helper_method :all_posts_tin_tuc
 
 
   end
+
+  def all_departments
+    @department=Department.all
+  end
+  
   def all_posts_tuyen_sinh
     @category=Category.find('1')
     @post=@category.posts.order(created_at: :desc).limit(5)

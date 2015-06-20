@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "description"
+    t.string   "slogan"
   end
 
   create_table "posts", force: :cascade do |t|

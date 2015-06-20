@@ -15,7 +15,7 @@ menu priority: 5,:if => proc{ current_admin_user.is_admin? },label: "Quản lý 
 # end
 controller do
     def permitted_params
-      params.permit department: [:name,:description]
+      params.permit department: [:name,:description,:slogan]
     end
     before_filter { @page_title = "Thêm phòng ban" }
     def edit
@@ -29,6 +29,7 @@ controller do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
     column "Tên phòng ban",:name 
+    column "Tên phòng ban",:slogan 
     column "Ngày tạo",:created_at
     column "" do |resource|
       links = ''.html_safe
@@ -43,6 +44,7 @@ controller do
   form :html => { :multipart => true } do |f|
     f.inputs do
       f.input :name, :label => "Tên phòng ban"
+      f.input :slogan, :label => "Slogan" 
       f.cktext_area :description, :class => 'ckeditor', :label => "Mô tả"
       end
       f.actions
@@ -59,6 +61,9 @@ controller do
       attributes_table_for department do
         row "Tên phòng ban" do
           s.name
+        end
+        row "Slogan" do
+          s.slogan
         end
         
         row "Mô tả" do

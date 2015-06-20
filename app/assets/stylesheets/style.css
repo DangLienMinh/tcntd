@@ -1019,5 +1019,6 @@ customize
 }
 
 .box-radius{
+	padding: 9px;
 	border-radius: 5px;
 }

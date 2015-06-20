@@ -1,7 +1,8 @@
+# encoding: utf-8
 <header id="head" class="secondary">
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing eliras scele!</p>
+    <h1>LIÊN HỆ VỚI NHÀ TRƯỜNG</h1>
+
   </div>
 </header>
 
@@ -10,9 +11,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h3 class="section-title">Your Message</h3>
+      <h3 class="section-title">GỬI LIÊN HỆ</h3>
       <p>
-        Lorem Ipsum is inting and typesetting in simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the is dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        Với mục tiêu dân chủ trong nhà trường, ban giám hiệu nhà trường luôn muốn nghe những ý kiến đóng góp, phản ánh từ phía học sinh và phụ huynh học sinh.
       </p>
 
 
@@ -22,56 +23,60 @@
 
       <form class="form-light mt-20" role="form">
         <div class="form-group">
-          <label>Name</label>
-          <%= f.text_field :name,:class=>"form-control",:placeholder=>"Your name" %>
+          <label>Họ Tên</label>
+          <%= f.text_field :name,:class=>"form-control",:placeholder=>"Họ Tên" %>
 
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label>Email</label>
-              <%= f.text_field :email, :class=>"form-control",:placeholder=>"Email address" %>
+              <%= f.text_field :email, :class=>"form-control",:placeholder=>"Địa Chỉ Email" %>
 
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label>Phone</label>
-              <%= f.text_field :phone , :class=>"form-control",:placeholder=>"Phone number" %>
+              <label>SĐT</label>
+              <%= f.text_field :phone , :class=>"form-control",:placeholder=>"SĐT" %>
 
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label>Subject</label>
-          <%= f.text_field :subject, :class=>"form-control",:placeholder=>"Subject" %>
+          <label>Tiêu Đề</label>
+          <%= f.text_field :subject, :class=>"form-control",:placeholder=>"Tiêu Đề" %>
 
         </div>
         <div class="form-group">
-          <label>Message</label>
-          <%= f.text_area :message , :class=>"form-control",:placeholder=>"Write you message here...",:style=>"height:100px;"%><br/>
+          <label>Nội dung</label>
+          <%= f.text_area :message , :class=>"form-control",:placeholder=>"Nhập Nội Dung Liên Hệ...",:style=>"height:100px;"%><br/>
 
         </div>
-        <%= f.submit "Send message",:class=>"btn btn-two" %><p><br/></p>
+        <%= recaptcha_tags %>
+        <%= f.submit "Gửi Liên hệ",:class=>"btn btn-two" %><p><br/></p>
       </form>
     </div>
     <div class="col-md-4">
       <div class="row">
-        <div class="col-md-6">
-          <h3 class="section-title">Office Address</h3>
+        <div class="col-md-11">
+          <h3 class="section-title" style="text-align: center;">TRƯỜNG TRUNG CẤP NGHỀ THỦ ĐỨC </h3>
           <div class="contact-info">
-            <h5>Address</h5>
-            <p>5th Street, Carl View - United States</p>
+            <h5><strong>Địa Chỉ</strong></h5>
+            <p>Số 17 - Đường 8 - P.Linh Chiểu - Q.Thủ Đức - HCM </p>
 
-            <h5>Email</h5>
-            <p>info@webthemez.com</p>
+            <h5><strong>Điện Thoại-Fax</strong></h5>
+            <p> (08) 36029585 -(08) 36029585</p>
 
-            <h5>Phone</h5>
-            <p>+09 123 1234 123</p>
+
+            <h5><strong>Email</strong></h5>
+            <p>tcnthuduc@gmail.com</p>
           </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.4457868917802!2d106.76601600000001!3d10.853659000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175279edf747bc1%3A0x1fb1f6f29f2cf70f!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIE5naOG7gSBUaOG7pyDEkOG7qWM!5e0!3m2!1svi!2s!4v1434771451847" width="328" height="225" frameborder="0" style="border:0"></iframe>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <% end %>

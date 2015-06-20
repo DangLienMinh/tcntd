@@ -26,7 +26,9 @@ ActiveAdmin.register Slidercontent do
     column :ordernum
     column :link
     column :topcaption
-    column :botcaption
+    column "Image" do |m|
+      m.picture? ? image_tag(m.picture.url,width:'100', height: '100') : content_tag(:span, "Chưa có dữ liệu ")
+    end
     actions
   end
 

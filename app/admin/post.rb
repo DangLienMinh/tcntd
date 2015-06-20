@@ -59,6 +59,9 @@ ActiveAdmin.register Post do
     column "Tiêu đề",:title 
     column "Tác giả",:admin_user
     column "Loại tin",:category
+    column "Image" do |m|
+      m.pic? ? image_tag(m.pic.url,width:'100', height: '100') : content_tag(:span, "Chưa có dữ liệu")
+    end
     column "Ngày tạo",:created_at
     column "" do |resource|
       links = ''.html_safe

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ContactsController < ApplicationController
 
   def post_params
@@ -9,15 +10,16 @@ class ContactsController < ApplicationController
   def create
     @c=Contact.new(post_params)
     if verify_recaptcha
-        if @c.save
-          redirect_to contacts_new_path, :notice => "Them ok"
+      if @c.save
+          redirect_to contacts_new_path, :notice => "Cảm ơn bạn đã gửi liên hệ cho nhà trường !"
         else
           render "new"
         end
     else
-      build_resource
-      flash[:error] = "Captcha has wrong, try a again."
-      respond_with_navigational(resource) { render :new }
+
+      flash[:error] = "Captcha nhập chưa đúng, Vui lòng nhập lại!"
+      flash.delete(:recaptcha_error)
+      render "new"
     end
 
   end

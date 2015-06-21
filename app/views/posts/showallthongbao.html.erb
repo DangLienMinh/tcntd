@@ -1,0 +1,105 @@
+# encoding: utf-8
+<header id="head" class="secondary">
+  <div class="container">
+    <h1>THÔNG BÁO</h1>
+  </div>
+</header>
+
+<style>
+    .pic {
+        float: left;
+
+        margin: 0px 15px 15px 20px;
+        width: 110px;
+    }
+    .flickr_pagination {
+        text-align: center;
+        padding: 0.3em;
+        cursor: default; }
+    .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+        padding: 0.2em 0.5em; }
+    .flickr_pagination .disabled {
+        color: #aaaaaa; }
+    .flickr_pagination .current {
+        font-style: normal;
+        font-weight: bold;
+        color: #ff0084; }
+    .flickr_pagination a {
+        border: 1px solid #dddddd;
+        color: #0063dc;
+        text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+        border-color: #003366;
+        background: #0063dc;
+        color: white; }
+    .flickr_pagination .page_info {
+        color: #aaaaaa;
+        padding-top: 0.8em; }
+    .flickr_pagination .previous_page, .flickr_pagination .next_page {
+        border-width: 2px; }
+    .flickr_pagination .previous_page {
+        margin-right: 1em; }
+    .flickr_pagination .next_page {
+        margin-left: 1em; }
+
+
+</style>
+<section class="container">
+  <div class="row" style="margin-top: 35px;">
+    <!-- main content -->
+
+    <aside class="col-sm-12 sidebar sidebar-right box-shadow box-radius" >
+
+
+
+      <div class="panel">
+
+        <ul class="list-unstyled list-spaces">
+
+
+          <%  @posttd.each do |tt| %>
+              <li><%= link_to truncate(tt.title,:length=>75),posts_show_path(:id=>tt.id) %></li>
+
+              <%= image_tag tt.pic.url ,:class => "pic"%>
+              <%= tt.summary%>
+              <div style="text-align: right;">
+                <%= link_to "Chi Tiết ...",posts_show_path(:id=>tt.id) %>
+              </div>
+
+              <div style="clear: both;"></div>
+              <h1 style="border-bottom: 1px dotted #ccc"></h1>
+          <% end %>
+          <div class="flickr_pagination">
+            <%= will_paginate @posttd %>
+          </div>
+
+        </ul>
+      </div>
+
+    </aside>
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,5 +7,4 @@ class Contact < ActiveRecord::Base
   validates_presence_of :message
   validates_presence_of :email,email:true
   validates_presence_of :subject
-
 end

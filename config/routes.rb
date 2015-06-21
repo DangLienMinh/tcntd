@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
 
   get 'posts/show'
+  get 'posts/showalltintuc'
+  get 'posts/showalltuyensinh'
+  get 'posts/showalltuyendung'
+  get 'posts/showallthongbao'
   get 'home/contact'
   get 'pages/gioithieu'
 

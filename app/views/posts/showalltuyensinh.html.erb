@@ -58,7 +58,7 @@
 
 
           <%  @posttd.each do |tt| %>
-              <li><%= link_to truncate(tt.title,:length=>75),posts_show_path(:id=>tt.id) %></li>
+              <li><%= link_to truncate(tt.name,:length=>75),posts_show_path(:id=>tt.id) %></li>
 
               <%= image_tag tt.pic.url ,:class => "pic"%>
               <%= tt.summary%>

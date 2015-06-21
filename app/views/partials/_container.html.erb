@@ -11,7 +11,11 @@
         <h4>TUYỂN SINH</h4>
         <ul class="list-unstyled list-spaces text-left">
           <% all_posts_tuyen_sinh.each do |post| %>
+<<<<<<< HEAD
               <li><%= link_to truncate(post.title,:length=>75),posts_show_path(:id=>post.id) %></li>
+=======
+              <li><%= link_to post.name,post_path(post) %></li>
+>>>>>>> 01abfcda52bb1b7ba40d586748790d4b896b0eb4
           <% end %>
         </ul>
         <p><a href="#"><em><%= link_to "Xem thêm ..." ,posts_showalltuyensinh_path%></em></a></p>
@@ -25,7 +29,11 @@
         <h4>THÔNG BÁO</h4>
         <ul class="list-unstyled list-spaces text-left">
           <% all_posts_thong_bao.each do |post| %>
+<<<<<<< HEAD
               <li><%= link_to truncate(post.title,:length=>75),posts_show_path(:id=>post.id) %></li>
+=======
+              <li><%= link_to post.name,post_path(post) %></li>
+>>>>>>> 01abfcda52bb1b7ba40d586748790d4b896b0eb4
           <% end %>
 
 
@@ -41,7 +49,11 @@
         <h4>TIN TỨC</h4>
         <ul class="list-unstyled list-spaces text-left">
           <% all_posts_tin_tuc.each do |post| %>
+<<<<<<< HEAD
               <li><%= link_to truncate(post.title,:length=>75),posts_show_path(:id=>post.id) %></li>
+=======
+              <li><%= link_to post.name,post_path(post) %></li>
+>>>>>>> 01abfcda52bb1b7ba40d586748790d4b896b0eb4
           <% end %>
         </ul>
         <p><a href="#"><em><%= link_to "Xem thêm ..." ,posts_showalltintuc_path%></em></a></p>
@@ -55,7 +67,11 @@
         <h4>TUYỂN DỤNG</h4>
         <ul class="list-unstyled list-spaces text-left">
           <% all_posts_tuyen_dung.each do |post| %>
+<<<<<<< HEAD
               <li><%= link_to truncate(post.title,:length=>75) ,posts_show_path(:id=>post.id) %></li>
+=======
+              <li><%= link_to post.name,post_path(post) %></li>
+>>>>>>> 01abfcda52bb1b7ba40d586748790d4b896b0eb4
           <% end %>
         </ul>
         <p><a href="#"><em><%= link_to "Xem thêm ..." ,posts_showalltuyendung_path%></em></a></p>

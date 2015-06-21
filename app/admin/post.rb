@@ -16,7 +16,7 @@ ActiveAdmin.register Post do
 
   controller do
     def permitted_params
-      params.permit post: [:title, :pic, :summary, :content, :category_id, :admin_user_id, :department_id]
+      params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :department_id]
     end
     def scoped_collection
       # some stuffs
@@ -56,7 +56,7 @@ ActiveAdmin.register Post do
     # column :title do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
-    column "Tiêu đề",:title 
+    column "Tiêu đề",:name 
     column "Tác giả",:admin_user
     column "Loại tin",:category
     column "Image" do |m|
@@ -75,7 +75,7 @@ ActiveAdmin.register Post do
 
   form :html => { :multipart => true } do |f|
     f.inputs do
-      f.input :title, :label => "Tiêu đề"
+      f.input :name, :label => "Tiêu đề"
       if current_admin_user.is_admin?
         #f.input :category, :label => "Loại tin", :collection => Category.where(:id=>[1,2,3,4])
         f.input :category, :label => "Loại tin", :include_blank => false
@@ -104,7 +104,7 @@ ActiveAdmin.register Post do
     panel "Chi tiết bài viết" do
       attributes_table_for post do
         row "Tiêu đề" do
-          s.title
+          s.name
         end
         row "Loại tin" do
           s.category

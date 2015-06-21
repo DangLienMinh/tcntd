@@ -24,7 +24,7 @@
         <h4>THÔNG BÁO</h4>
         <ul class="list-unstyled list-spaces text-left">
           <% all_posts_thong_bao.each do |post| %>
-              <li><%= link_to post.name,post_path(post) %></li>
+              <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>
           <% end %>
 
 

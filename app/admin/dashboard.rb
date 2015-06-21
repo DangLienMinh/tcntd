@@ -10,7 +10,7 @@ ActiveAdmin.register_page "Dashboard" do
            table_for Post.order("id desc").limit(15) do
              column :id
              column "Tiêu đề",:title do |post|
-               link_to post.title,[:admin,post]
+               link_to post.name,[:admin,post]
              end
              column "Tác giả",:admin_user
              column "Loại tin",:category,:sortable => :category

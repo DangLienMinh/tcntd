@@ -15,6 +15,7 @@ ActiveAdmin.register Post do
 # end
 
   controller do
+    skip_before_filter :getActiveProjects
     def permitted_params
       params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :department_id]
     end
@@ -48,7 +49,7 @@ ActiveAdmin.register Post do
     before_filter { @page_title = "Thêm bài viết" }
     def edit
       # use resource.some_method to access information about what you're editing
-      @page_title = "Cập nhật bài viết "+resource.title
+      @page_title = "Cập nhật bài viết "+resource.name
     end
   end
 

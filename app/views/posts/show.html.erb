@@ -10,7 +10,7 @@
   <div class="row">
     <!-- main content -->
     <section class="col-sm-8 maincontent" >
-      <h3><%= @post.title %></h3>
+      <h3><%= @post.name %></h3>
       <small><%= @post.created_at.strftime("%b %d. %Y") %></small>
       <p>Create By  :<%= @post.admin_user.name %></p>
       <p><%= raw(@post.content) %></p>
@@ -24,7 +24,7 @@
         <ul class="list-unstyled list-spaces">
 
           <% @allpost.each do |post| %>
-              <li><%= link_to post.title,posts_show_path(:id=>post.id) %></li>
+              <li><%= link_to post.name,posts_show_path(:id=>post.id) %></li>
           <% end %>
 
 

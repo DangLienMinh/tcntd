@@ -3,26 +3,45 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+Site example:
+ http://tcntd.herokuapp.com/
+
 Things you may want to cover:
 
 * Ruby version
+  ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux]
 
 * System dependencies
+  Linux operating systems with the latest Rails and PostgreSQL. Also install PgAdmin III for database GUI management and Sublimetext for IDE. Heroku for code management.
+  Read this tutorial for detail:
+  http://giaiphaptinhoc.vn/index.php/ngon-ngu-lap-trinh/ruby-on-rails/huong-dan-cai-dat-rails-tren-ubuntu-14-04-2/
 
 * Configuration
+  Change database default password with the following commands:
+  - sudo -u postgres psql
+  - \password postgres
+  - \q
 
 * Database creation
+  Open PgAdmin III create new role name: trungcapnghe with password: trungcapnghe, after that create new database name: trungcapnghe with owner trungcapnghe (the role above)
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+  Restore database sample data with the following command
+  - heroku pg:backups restore 'http://codad.vn/db.dump' database
 
 * Deployment instructions
+  Create new folder name trungcapnghe where you want to put the project folder in. Type in these commads:
+  - cd <to project folder container>
+  - heroku login
+  - heroku git:clone -a tcntd
+  - cd tcntd
+  - bundle install
+  - rake db:migrate
+  - rails s
+  After starting rail server, if everything works fine just go to the browser and type localhost:3000 in address.
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Admin section:
+  Using pgadmin for admin GUI.
+  - localhost:3000/admin
+  Default username: admin@example.com
+  Password: password

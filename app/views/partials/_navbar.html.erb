@@ -25,7 +25,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phòng Ban <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <% all_departments.each do |depr| %>
-              <li><%= link_to depr.name,departments_show_path(:id=>depr.id) %></li>
+              <li><%= link_to depr.name,department_path(depr) %></li>
             <% end %>
           </ul>
         </li>

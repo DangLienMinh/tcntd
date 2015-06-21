@@ -1,5 +1,7 @@
 class DepartmentsController < ApplicationController
   def show
+    
+    #@department=Department.find_by_url(params[:id])
     @department=Department.find(params[:id])
     @category=Category.joins(:posts).where("posts.department_id=?",@department.id).uniq
     

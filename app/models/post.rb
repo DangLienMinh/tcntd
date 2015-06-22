@@ -11,6 +11,6 @@ class Post < ActiveRecord::Base
 
 	acts_as_url :name, :sync_url => true, :allow_slash => true, url_attribute: :url
 	def to_param
-	  "#{id}-#{self.department.name}/#{self.category.name}/#{url}"
+	  "#{id}-#{self.department.url}/#{self.category.url}/#{url}"
 	end
 end

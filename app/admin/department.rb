@@ -15,7 +15,7 @@ menu priority: 5,:if => proc{ current_admin_user.is_admin? },label: "Quản lý 
 # end
 controller do
     def permitted_params
-      params.permit department: [:name,:description,:slogan,:url]
+      params.permit department: [:name,:description,:slogan,:department_type,:url]
     end
     before_filter { @page_title = "Thêm phòng ban" }
     def edit

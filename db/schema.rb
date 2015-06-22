@@ -54,10 +54,9 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "url"
-    t.integer  "category_type", default: 0
   end
 
   add_index "categories", ["url"], name: "index_categories_on_url", unique: true, using: :btree
@@ -90,15 +89,23 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "description"
     t.string   "slogan"
     t.string   "url"
-    t.integer  "department_type", default: 0
+    t.integer  "menu_id"
   end
 
   add_index "departments", ["url"], name: "index_departments_on_url", unique: true, using: :btree
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "parent",     default: 0
+    t.integer  "order"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "name",             null: false

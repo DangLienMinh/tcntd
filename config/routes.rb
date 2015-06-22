@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'menus/show'
+
   mount Ckeditor::Engine => '/ckeditor'
   get 'contacts/new'
 
@@ -21,7 +23,7 @@ Rails.application.routes.draw do
   get 'pages/kiemdinh'
 ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
-  
+  #devise_for :admin, :controllers => { :sessions => "sessions" }
   get 'home/index'
 
   # get 'posts/new'
@@ -69,6 +71,7 @@ ActiveAdmin.routes(self)
   resources :home
   resources :categories
   resources :contacts
+  resources :menus
   #resources :posts,path: 'tin-tuc'
   get '/tin-tuc/*id', to: 'posts#show', as: :post
   #get 'tin-tuc/new', to: 'posts#new', as: :post

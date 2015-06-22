@@ -4,9 +4,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :all_categories
-  helper_method :all_phongban
-  helper_method :all_khoa
-  helper_method :all_gioithieu
+  #helper_method :all_phongban
+  #helper_method :all_khoa
+  #helper_method :all_gioithieu
+  helper_method :all_menu
+  helper_method :all_sub_menu
   helper_method :all_posts_thong_bao
   helper_method :all_posts_tuyen_sinh
   helper_method :all_posts_tuyen_dung
@@ -21,17 +23,25 @@ class ApplicationController < ActionController::Base
     @post=@category.posts.order(created_at: :desc).limit(5)
   end
 
-  def all_phongban
-    @department=Department.all.where(department_type: 0)
+  # def all_phongban
+  #   @department=Department.all.where(department_type: 0)
+  # end
+
+  def all_menu
+    @menu=Menu.all.where(parent: 0).order(order: :asc)
   end
 
-  def all_gioithieu
-    @category=Category.all.where(category_type: 1)
+  def all_sub_menu(parent_id)
+    @submenu=Menu.all.where(parent: parent_id).order(order: :asc)
   end
 
-  def all_khoa
-    @department=Department.all.where(department_type: 1)
-  end
+  # def all_gioithieu
+  #   @category=Category.all.where(category_type: 1)
+  # end
+
+  # def all_khoa
+  #   @department=Department.all.where(department_type: 1)
+  # end
   
   def all_posts_tuyen_sinh
     @category=Category.find('1')

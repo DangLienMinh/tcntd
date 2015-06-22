@@ -30,7 +30,10 @@ controller do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
     column "Tên phòng ban",:name 
-    column "Tên phòng ban",:slogan 
+    column "Lời giới thiệu",:slogan 
+    column :department_type do |object|
+      object.department_type? ? 'Khoa' : 'Phòng ban'
+  end
     column "Ngày tạo",:created_at
     column "" do |resource|
       links = ''.html_safe
@@ -46,6 +49,7 @@ controller do
     f.inputs do
       f.input :name, :label => "Tên phòng ban"
       f.input :slogan, :label => "Slogan" 
+      f.input :department_type, :label => "Là khoa hay phòng ban", :as => :radio, :collection =>[['Phòng ban', 0],['Khoa', 1]]
       f.cktext_area :description, :class => 'ckeditor', :label => "Mô tả"
       end
       f.actions
@@ -65,6 +69,9 @@ controller do
         end
         row "Slogan" do
           s.slogan
+        end
+        row "Là khoa hay phòng ban" do
+          s.department_type==0? "Là phòng ban" : "Là khoa"
         end
         
         row "Mô tả" do

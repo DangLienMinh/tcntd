@@ -24,7 +24,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phòng Ban <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <% all_departments.each do |depr| %>
+            <% all_phongban.each do |depr| %>
               <li><%= link_to depr.name,department_path(depr) %></li>
             <% end %>
           </ul>
@@ -33,10 +33,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Khoa <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-            <li><a href="#">Thư ngỏ của Hiệu trưởng</a></li>
-            <li><a href="#">Dummy Link2</a></li>
-            <li><a href="#">Dummy Link3</a></li>
+            <% all_khoa.each do |depr| %>
+              <li><%= link_to depr.name,department_path(depr) %></li>
+            <% end %>
           </ul>
         </li>
 

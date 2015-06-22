@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :all_categories
-  helper_method :all_departments
+  helper_method :all_phongban
+  helper_method :all_khoa
   helper_method :all_posts_thong_bao
   helper_method :all_posts_tuyen_sinh
-helper_method :all_posts_tuyen_dung
-helper_method :all_posts_tin_tuc
+  helper_method :all_posts_tuyen_dung
+  helper_method :all_posts_tin_tuc
   helper_method :all_slider
   def all_categories
     @categories=Category.all
@@ -21,8 +22,12 @@ helper_method :all_posts_tin_tuc
 
   end
 
-  def all_departments
-    @department=Department.all
+  def all_phongban
+    @department=Department.all.where(department_type: 0)
+  end
+
+  def all_khoa
+    @department=Department.all.where(department_type: 1)
   end
   
   def all_posts_tuyen_sinh

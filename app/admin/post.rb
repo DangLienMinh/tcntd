@@ -80,12 +80,11 @@ ActiveAdmin.register Post do
     f.inputs do
       f.input :name, :label => "Tiêu đề"
       if current_admin_user.is_admin?
-        #f.input :category, :label => "Loại tin", :collection => Category.where(:id=>[1,2,3,4])
         f.input :category, :label => "Loại tin", :include_blank => false
         f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id, :include_blank => false
         f.input :department, :label => "Phòng ban", :include_blank => false
       else
-        f.input :category, :label => "Loại tin", :include_blank => false
+        f.input :category, :label => "Loại tin", :include_blank => false, :collection => Category.where(:id=>[1,2,3,4])
         f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id, :include_blank => false
         f.input :department, :label => "Phòng ban", collection: Department.where(id: current_admin_user.department_id), :selected => current_admin_user.department_id, :include_blank => false
       end

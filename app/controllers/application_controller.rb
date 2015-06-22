@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :all_categories
   helper_method :all_phongban
   helper_method :all_khoa
+  helper_method :all_gioithieu
   helper_method :all_posts_thong_bao
   helper_method :all_posts_tuyen_sinh
   helper_method :all_posts_tuyen_dung
@@ -18,12 +19,14 @@ class ApplicationController < ActionController::Base
   def all_posts_thong_bao
     @category=Category.find('2')
     @post=@category.posts.order(created_at: :desc).limit(5)
-
-
   end
 
   def all_phongban
     @department=Department.all.where(department_type: 0)
+  end
+
+  def all_gioithieu
+    @category=Category.all.where(category_type: 1)
   end
 
   def all_khoa

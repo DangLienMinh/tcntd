@@ -38,19 +38,19 @@ ActiveAdmin.routes(self)
 
   # get 'posts/index'
 
-  get 'categories/new'
+  # get 'categories/new'
 
-  get 'categories/edit'
+  # get 'categories/edit'
 
-  get 'categories/create'
+  # get 'categories/create'
 
-  get 'categories/update'
+  # get 'categories/update'
 
-  get 'categories/show'
+  # get 'categories/show'
 
-  get 'categories/destroy'
+  # get 'categories/destroy'
 
-  get 'categories/index'
+  # get 'categories/index'
 
   # get 'departments/new'
 
@@ -67,6 +67,7 @@ ActiveAdmin.routes(self)
 
   get 'departments/index'
   resources :home
+  resources :categories
   resources :contacts
   #resources :posts,path: 'tin-tuc'
   get '/tin-tuc/*id', to: 'posts#show', as: :post

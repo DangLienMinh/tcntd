@@ -9,7 +9,7 @@ ActiveAdmin.register_page "Dashboard" do
          panel "Bài viết gần đây" do
            table_for Post.order("id desc").limit(15) do
              column :id
-             column "Tiêu đề",:title do |post|
+             column "Tiêu đề",:name do |post|
                link_to post.name,[:admin,post]
              end
              column "Tác giả",:admin_user
@@ -57,7 +57,7 @@ ActiveAdmin.register_page "Dashboard" do
             table_for Post.where(department_id: current_admin_user.department_id).order("id desc").limit(15) do
              column :id
              column "Tiêu đề",:title do |post|
-               link_to post.title,[:admin,post]
+               link_to post.name,[:admin,post]
              end
              column "Tác giả",:admin_user
              column "Loại tin",:category,:sortable => :category

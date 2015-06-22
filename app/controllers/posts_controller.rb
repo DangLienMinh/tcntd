@@ -11,7 +11,6 @@ class PostsController < ApplicationController
   end
   def showalltintuc
     @posttd=Post.where("category_id = ?",3).order(:created_at).paginate(:page => params[:page], :per_page => 4)
-
   end
   def showallthongbao
     @posttd=Post.where("category_id = ?",2).order(:created_at).paginate(:page => params[:page], :per_page => 4)

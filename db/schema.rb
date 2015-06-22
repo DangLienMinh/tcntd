@@ -54,9 +54,10 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "url"
+    t.integer  "category_type", default: 0
   end
 
   add_index "categories", ["url"], name: "index_categories_on_url", unique: true, using: :btree

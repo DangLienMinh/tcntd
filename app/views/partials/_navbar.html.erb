@@ -14,10 +14,9 @@
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown">Giới Thiệu <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="thu-ngo.html">Thư Ngỏ Của Hiệu trưởng</a></li>
-            <li><a href="gioi-thieu.html">Giới Thiệu Chung</a></li>
-            <li><a href="co-so-vat-chat.html">Cơ Sở Vật Chất</a></li>
-            <li><a href="kiem-dinh-chat-luong.html">Kiểm Định Chất Lượng Dạy Nghề</a></li>
+            <% all_gioithieu.each do |depr| %>
+              <li><%= link_to depr.name,category_path(depr) %></li>
+            <% end %>
           </ul>
         </li>
 

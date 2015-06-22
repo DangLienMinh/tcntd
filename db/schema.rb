@@ -56,7 +56,10 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "url"
   end
+
+  add_index "categories", ["url"], name: "index_categories_on_url", unique: true, using: :btree
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -86,11 +89,12 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.text     "description"
     t.string   "slogan"
     t.string   "url"
+    t.integer  "department_type", default: 0
   end
 
   add_index "departments", ["url"], name: "index_departments_on_url", unique: true, using: :btree

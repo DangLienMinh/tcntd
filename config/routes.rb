@@ -24,19 +24,19 @@ ActiveAdmin.routes(self)
   
   get 'home/index'
 
-  get 'posts/new'
+  # get 'posts/new'
 
-  get 'posts/edit'
+  # get 'posts/edit'
 
-  get 'posts/create'
+  # get 'posts/create'
 
-  get 'posts/update'
+  # get 'posts/update'
 
-  get 'posts/show'
+  # get 'posts/show'
 
-  get 'posts/destroy'
+  # get 'posts/destroy'
 
-  get 'posts/index'
+  # get 'posts/index'
 
   get 'categories/new'
 
@@ -68,9 +68,12 @@ ActiveAdmin.routes(self)
   get 'departments/index'
   resources :home
   resources :contacts
-  resources :posts
-  resources :departments, path: 'phong-ban'
+  #resources :posts,path: 'tin-tuc'
+  get '/tin-tuc/*id', to: 'posts#show', as: :post
+  #get 'tin-tuc/new', to: 'posts#new', as: :post
 
+  get 'tin-tuc/index'
+  resources :departments, path: 'phong-ban'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

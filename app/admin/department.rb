@@ -29,9 +29,12 @@ controller do
     # column :title do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
-    column "Tên phòng ban",:name 
+
+    column "Tên phòng ban",:name do |name|
+        link_to name.name,[:admin,name]
+      end
     column "Lời giới thiệu",:slogan 
-    column :department_type do |object|
+    column "Là khoa hay phòng ban",:department_type do |object|
       object.department_type? ? 'Khoa' : 'Phòng ban'
   end
     column "Ngày tạo",:created_at

@@ -3,8 +3,9 @@ ActiveAdmin.register AdminUser do
   permit_params :email, :name, :password, :password_confirmation, :is_admin, :department_id
     index title: "Danh sách người dùng" do
       selectable_column
-      id_column
-      column "Email",:email
+      column "Email",:email do |email|
+        link_to email.email,[:admin,email]
+      end
       column "Họ tên",:name
       column "Ngày ĐN mới nhất ",:current_sign_in_at
       column "Số lần ĐN",:sign_in_count

@@ -57,7 +57,9 @@ ActiveAdmin.register Post do
     # column :title do
     #   link_to(:title, admin_post_path(s.title)) 
     # end
-    column "Tiêu đề",:name 
+    column "Tiêu đề",:name do |name|
+        link_to name.name,[:admin,name]
+      end
     column "Tác giả",:admin_user
     column "Loại tin",:category
     column "Image" do |m|

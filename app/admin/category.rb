@@ -25,8 +25,9 @@ controller do
 
   index title: "Danh sách danh mục" do
       selectable_column
-      column "ID", :id
-      column "Tên danh mục",:name
+      column "Tên danh mục",:name do |name|
+        link_to name.name,[:admin,name]
+      end
       column "Ngày tạo",:created_at
       column "Ngày cập nhật",:updated_at
       column "" do |resource|

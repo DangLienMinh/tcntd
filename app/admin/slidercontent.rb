@@ -1,6 +1,7 @@
 # encoding: utf-8
 ActiveAdmin.register Slidercontent do
-  menu priority: 6,label: "Quản lý slider"
+  menu priority: 6,:if => proc{ current_admin_user.is_admin? },label: "Quản lý slider"
+
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

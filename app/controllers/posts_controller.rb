@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @post=Post.find(params[:id])
     @user=AdminUser.all
     @category=@post.category
-    @allpost=@category.posts.where("id != ? and department_id=?",@post.id,@post.department_id).order(:created_at).limit(5)
+    @allpost=@category.posts.where("id != ? and page_id=?",@post.id,@post.page_id).order(:created_at).limit(5)
   end
   def showalltintuc
     @posttd=Post.where("category_id = ?",3).order(:created_at).paginate(:page => params[:page], :per_page => 4)

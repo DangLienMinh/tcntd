@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'menus/show'
+  #get 'menus/show'
 
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -66,9 +66,9 @@ ActiveAdmin.routes(self)
   resources :home
   resources :categories
   resources :contacts
-  resources :menus
+  resources :menus , path: 'trang'
   #resources :posts,path: 'tin-tuc'
-  get '/tin-tuc/*id', to: 'posts#show', as: :post
+  get '/*id', to: 'posts#show', as: :post
   #get 'tin-tuc/new', to: 'posts#new', as: :post
 
   get 'tin-tuc/index'

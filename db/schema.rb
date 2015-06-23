@@ -93,7 +93,10 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.integer  "order"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "url"
   end
+
+  add_index "menus", ["url"], name: "index_menus_on_url", unique: true, using: :btree
 
   create_table "pages", force: :cascade do |t|
     t.string   "name"

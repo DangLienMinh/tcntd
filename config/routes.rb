@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
+
+
   get 'menus/show'
->>>>>>> c37c11777947f98490ec640abfa279806197234f
+
 
   mount Ckeditor::Engine => '/ckeditor'
   get 'contacts/new'

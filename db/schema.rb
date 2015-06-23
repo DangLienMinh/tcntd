@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.integer  "is_admin",               default: 0
-    t.integer  "department_id"
+    t.integer  "page_id"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -87,7 +87,15 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "updated_at"
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "parent",     default: 0
+    t.integer  "order"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -97,15 +105,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.integer  "menu_id"
   end
 
-  add_index "departments", ["url"], name: "index_departments_on_url", unique: true, using: :btree
-
-  create_table "menus", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "parent",     default: 0
-    t.integer  "order"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+  add_index "pages", ["url"], name: "index_pages_on_url", unique: true, using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "name",             null: false
@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
-    t.integer  "department_id",    null: false
+    t.integer  "page_id",          null: false
     t.string   "url"
   end
 

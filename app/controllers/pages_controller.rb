@@ -1,9 +1,9 @@
-class DepartmentsController < ApplicationController
+class PagesController < ApplicationController
   def show
     
     #@department=Department.find_by_url(params[:id])
-    @department=Department.find(params[:id])
-    @category=Category.joins(:posts).where("posts.department_id=? and categories.category_type=0",@department.id).uniq
+    @department=Page.find(params[:id])
+    @category=Category.joins(:posts).where("posts.page_id=? and categories.category_type=0",@department.id).uniq
     #@category=Category.joins(:posts).where("posts.department_id=?",@department.id).uniq
     #@category = Category.includes(:posts).select{|c| c.posts.where(['department_id = ?',@department.id])}
     #@category=Category.all

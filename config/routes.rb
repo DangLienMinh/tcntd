@@ -12,15 +12,7 @@ Rails.application.routes.draw do
   get 'posts/showalltuyendung'
   get 'posts/showallthongbao'
   get 'home/contact'
-  get 'pages/gioithieu'
 
-  get 'pages/lienhe'
-
-  get 'pages/thungo'
-
-  get 'pages/csvc'
-
-  get 'pages/kiemdinh'
 ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
   #devise_for :admin, :controllers => { :sessions => "sessions" }
@@ -67,7 +59,7 @@ ActiveAdmin.routes(self)
 
   # get 'departments/destroy'
 
-  get 'departments/index'
+  #get 'departments/index'
   resources :home
   resources :categories
   resources :contacts
@@ -77,7 +69,7 @@ ActiveAdmin.routes(self)
   #get 'tin-tuc/new', to: 'posts#new', as: :post
 
   get 'tin-tuc/index'
-  resources :departments, path: 'phong-ban'
+  resources :pages, path: 'trang'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -17,28 +17,28 @@ ActiveAdmin.register Post do
   controller do
     skip_before_filter :getActiveProjects
     def permitted_params
-      params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :department_id]
+      params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :page_id]
     end
     def scoped_collection
       # some stuffs
-      if current_admin_user.department_id==1
-        @department=Department.where(id: 1).select("id")
-        super.where(:department_id=>@department)
-      elsif current_admin_user.department_id==2
-        @department=Department.where(id: 2).select("id")
-        super.where(:department_id=>@department)
+      if current_admin_user.page_id==1
+        @department=Page.where(id: 1).select("id")
+        super.where(:page_id=>@department)
+      elsif current_admin_user.page_id==2
+        @department=Page.where(id: 2).select("id")
+        super.where(:page_id=>@department)
         #super.where(:category_id=>8)
-      elsif current_admin_user.department_id==3
-        @department=Department.where(id: 3).select("id")
-        super.where(:department_id=>@department)
+      elsif current_admin_user.page_id==3
+        @department=Page.where(id: 3).select("id")
+        super.where(:page_id=>@department)
         #super.where(:category_id=>7)
-      elsif current_admin_user.department_id==4
-        @department=Department.where(id: 4).select("id")
-        super.where(:department_id=>@department)
+      elsif current_admin_user.page_id==4
+        @department=Page.where(id: 4).select("id")
+        super.where(:page_id=>@department)
         #super.where(:category_id=>6)
-      elsif current_admin_user.department_id==5
-        @department=Department.where(id: 5).select("id")
-        super.where(:department_id=>@department)
+      elsif current_admin_user.page_id==5
+        @department=Page.where(id: 5).select("id")
+        super.where(:page_id=>@department)
         #super.where(:category_id=>5)
       else
         if current_admin_user.is_admin==1
@@ -82,11 +82,11 @@ ActiveAdmin.register Post do
       if current_admin_user.is_admin?
         f.input :category, :label => "Loại tin", :include_blank => false
         f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id, :include_blank => false
-        f.input :department, :label => "Phòng ban", :include_blank => false
+        f.input :page, :label => "Phòng ban", :include_blank => false
       else
         f.input :category, :label => "Loại tin", :include_blank => false, :collection => Category.where(:id=>[1,2,3,4])
         f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id, :include_blank => false
-        f.input :department, :label => "Phòng ban", collection: Department.where(id: current_admin_user.department_id), :selected => current_admin_user.department_id, :include_blank => false
+        f.input :page, :label => "Phòng ban", collection: Page.where(id: current_admin_user.page_id), :selected => current_admin_user.page_id, :include_blank => false
       end
       
       f.input :pic, :as => :file, :label => "Hình ảnh",:hint=>image_tag(f.object.pic.url(:thumb))
@@ -112,7 +112,7 @@ ActiveAdmin.register Post do
           s.category
         end
         row "Phòng ban" do
-          s.department
+          s.page
         end
         row "Tác giả" do
           s.admin_user

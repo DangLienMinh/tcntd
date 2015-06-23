@@ -1,4 +1,4 @@
-class Department < ActiveRecord::Base
+class Page < ActiveRecord::Base
 	has_many :admin_users
 	has_many :posts
 	belongs_to :menu

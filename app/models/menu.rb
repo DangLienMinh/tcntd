@@ -1,3 +1,3 @@
 class Menu < ActiveRecord::Base
-	has_one :department
+	has_one :page
 end

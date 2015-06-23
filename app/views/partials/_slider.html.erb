@@ -1,8 +1,5 @@
 # encoding: utf-8
-<%= javascript_include_tag "jquery.min" %>
-<%= javascript_include_tag "jquery.mobile.customized.min" %>
-<%= javascript_include_tag "jquery.easing.1.3" %>
-<%= javascript_include_tag "camera.min" %>
+
 <script>
     jQuery(function(){
 
@@ -33,7 +30,7 @@
       <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap">
         <% all_slider.each do |s| %>
         <div data-link="<%= s.link %>" data-target="_blank" data-thumb="<%= image_url s.picture.url(:thumb) %>" data-src="<%= image_url s.picture.url %>">
-          <div class="camera_caption" ><%=s.topcaption %></div>
+          <div class="camera_caption"><%=s.topcaption %></div>
         </div>
         <% end %>
 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+
   mount Ckeditor::Engine => '/ckeditor'
   get 'contacts/new'
-
+  get 'contacts/aa'
 
 
   get 'posts/show'

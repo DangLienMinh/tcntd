@@ -21,7 +21,10 @@
                 <% @category.each do |cate| %>
                     <% if !cate.posts.where("department_id=?",@department.id).empty? %>
                         <div class="panel  box-shadow box-radius">
-                            <h4><%= cate.name %></h4>
+                            <h4 style="background: #3D84E6 none repeat scroll 0% 0%;
+                                    color: #FFF;
+                                    padding: 10px;
+                                    text-transform: uppercase;margin-top: 0px;"><%= cate.name %></h4>
                             <ul class="list-unstyled list-spaces">
                                 <% cate.posts.where("department_id=?",@department.id).each do |post| %>
                                   <li><%= link_to post.name,post_path(post) %><br>

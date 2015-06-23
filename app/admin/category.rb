@@ -14,7 +14,7 @@ menu priority: 4,:if => proc{ current_admin_user.is_admin? },label: "Quản lý 
 # end
 controller do
     def permitted_params
-      params.permit category: [:name,:category_type]
+      params.permit category: [:name]
     end
     before_filter { @page_title = "Thêm danh mục" }
     def edit
@@ -27,9 +27,6 @@ controller do
       selectable_column
       column "Tên danh mục",:name do |name|
         link_to name.name,[:admin,name]
-      end
-      column "Loại danh mục",:category_type do |object|
-        object.category_type? ? 'Giới thiệu trường' : 'Chung'
       end
       column "Ngày tạo",:created_at
       column "Ngày cập nhật",:updated_at
@@ -46,7 +43,7 @@ controller do
   form do |f|
     f.inputs "Nhập thông tin chi tiết" do
       f.input :name,:label => "Tên danh mục"
-      f.input :category_type, :label => "Loại danh mục", :as => :radio, :collection =>[['Chung', 0],['Giới thiệu trường', 1]]
+      
     end
     f.actions
   end
@@ -65,9 +62,6 @@ controller do
         end
         row "Tên danh mục" do
           s.name
-        end
-        row "Loại danh mục" do
-          s.category_type==0? "Chung" : "Giới thiệu trường"
         end
         row "Ngày tạo" do
           s.created_at

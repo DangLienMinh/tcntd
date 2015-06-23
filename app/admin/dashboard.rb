@@ -54,7 +54,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
          panel "Bài viết gần đây" do
             #@department=Department.where(id: current_admin_user.department_id).select("id")
-            table_for Post.where(department_id: current_admin_user.department_id).order("id desc").limit(15) do
+            table_for Post.where(page_id: current_admin_user.page_id).order("id desc").limit(15) do
              column :id
              column "Tiêu đề",:title do |post|
                link_to post.name,[:admin,post]

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 	belongs_to :category
-	belongs_to :department
+	belongs_to :page
 	belongs_to :admin_user
 	has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   	validates_attachment_content_type :pic, :content_type => /^image\/(png|gif|jpeg)/
@@ -11,6 +11,6 @@ class Post < ActiveRecord::Base
 
 	acts_as_url :name, :sync_url => true, :allow_slash => true, url_attribute: :url
 	def to_param
-	  "#{id}-#{self.department.url}/#{self.category.url}/#{url}"
+	  "#{id}-#{self.page.url}/#{self.category.url}/#{url}"
 	end
 end

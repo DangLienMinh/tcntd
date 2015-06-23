@@ -10,78 +10,26 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right mainNav">
+
+
+
+
+
         <li><a href="<%= root_path  %>">Trang Chủ</a></li>
-        <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown">Giới Thiệu <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <% all_gioithieu.each do |depr| %>
-              <li><%= link_to depr.name,category_path(depr) %></li>
-            <% end %>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phòng Ban <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <% all_phongban.each do |depr| %>
-              <li><%= link_to depr.name,department_path(depr) %></li>
-            <% end %>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Khoa <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <% all_khoa.each do |depr| %>
-              <li><%= link_to depr.name,department_path(depr) %></li>
-            <% end %>
-          </ul>
-        </li>
+        <% all_menu.each do |menu| %>
+              <li class="dropdown">
+                <%= link_to "#{menu.name}<b class='caret'></b>".html_safe ,menu_path(menu),{:class => "dropdown-toggle","data-toggle" => "dropdown" }  
+                %>
 
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">TUYỂN SINH <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-            <li><a href="#">Thư ngỏ của Hiệu trưởng</a></li>
-            <li><a href="#">Dummy Link2</a></li>
-            <li><a href="#">Dummy Link3</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">ĐÀO TẠO <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-            <li><a href="#">Thư ngỏ của Hiệu trưởng</a></li>
-            <li><a href="#">Dummy Link2</a></li>
-            <li><a href="#">Dummy Link3</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">SINH VIÊN <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="sidebar-right.html">THỜI KHOÁ BIỂU</a></li>
-            <li><a href="#">TRANG SINH VIÊN</a></li>
-            <li><a href="#">ĐĂNG KÝ MÔN HỌC</a></li>
-            <li><a href="#">XEM ĐIỂM</a></li>
-          </ul>
-        </li>
-
-
-
-        <!--
-        <li><a href="videos.html">Videos</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                <li><a href="#">Dummy Link1</a></li>
-                <li><a href="#">Dummy Link2</a></li>
-                <li><a href="#">Dummy Link3</a></li>
-            </ul>
-        </li>
--->
+                <ul class="dropdown-menu">
+                  <% all_sub_menu(menu.id).each do |sub| %>
+                    <li><%= link_to sub.name,menu_path(sub) %></li>
+                  <% end %>
+                </ul>
+              </li>
+        <% end %>
+        
         <li><%= link_to "Liên Hệ",:controller => "contacts",:action => "new" %></li>
 
       </ul>

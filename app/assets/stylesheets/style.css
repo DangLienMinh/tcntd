@@ -1044,6 +1044,10 @@ customize
 	padding: 9px!important;
 	border-radius: 5px;
 }
+.box-radius1{
+    padding: 9px 0px!important;
+    border-radius: 5px;
+}
 .box-vnits-tintuc{
     height: 49px;
     background: url(/assets/hoinghi.png) no-repeat scroll 0% 0%;

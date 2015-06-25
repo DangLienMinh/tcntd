@@ -7,9 +7,11 @@ ActiveAdmin.register AdminUser do
         link_to email.email,[:admin,email]
       end
       column "Họ tên",:name
-      column "Ngày ĐN mới nhất ",:current_sign_in_at
-      column "Số lần ĐN",:sign_in_count
-      column "Quản trị",:is_admin
+      column "Ngày ĐN mới nhất",:current_sign_in_at
+      
+      column "Quản trị" do |m|
+      m.is_admin? ? "Quản trị" : "Người dùng"
+    end
       column "Trang",:page
       column "" do |resource|
         links = ''.html_safe
@@ -74,7 +76,7 @@ ActiveAdmin.register AdminUser do
           s.sign_in_count
         end
         row "Là quản trị hệ thống" do
-          s.is_admin
+          s.is_admin? ? "Quản trị" : "Người dùng"
         end
         row "Trang" do
           s.page

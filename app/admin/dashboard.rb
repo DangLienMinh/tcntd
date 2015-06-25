@@ -1,14 +1,13 @@
 ActiveAdmin.register_page "Dashboard" do
   menu :if => proc{ current_admin_user.is_admin? }
-  menu priority: 1, label: "Quản lý chung"
+  menu priority: 1, label: "Quản lí chung"
 
-  content title: "Quản lý chung" do
+  content title: "Hệ thống quản lí nội dung trang trungcapnghethuduc.vn" do
     if current_admin_user.is_admin==1
      columns do
        column do
          panel "Bài viết gần đây" do
-           table_for Post.order("id desc").limit(15) do
-             column :id
+           table_for Post.order("id desc").limit(5) do
              column "Tiêu đề",:name do |post|
                link_to post.name,[:admin,post]
              end
@@ -23,7 +22,6 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Loại tin" do
           table_for Category.order("id desc").limit(15) do
-            column :id
             column "Tên loại tin",:name do |category|
               link_to category.name,[:admin,category]
             end
@@ -37,7 +35,6 @@ ActiveAdmin.register_page "Dashboard" do
        column do
         panel "Yêu cầu liên hệ" do
           table_for Contact.order("id desc").limit(15) do
-            column :id
             column "Email",:email do |contact|
               link_to contact.name,[:admin,contact]
             end

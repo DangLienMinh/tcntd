@@ -28,11 +28,11 @@ h2 {
     text-transform: uppercase;
 }
 a{
-    color:#222;
+    color:#3d84e6;
     font: 14px/1.2em "Roboto",sans-serif;
 }
 a:hover, a:focus{
-    color:#222;
+    color:#81A6DA;
     text-decoration: underline;
 }
 .navbar-toggle {
@@ -205,11 +205,18 @@ ul, .list.custom-list ul {
 }
 .list.custom-list ul li a {
 	font: 14px/1.2em 'Roboto', sans-serif;
-	color:#222222;
+	color:#3d84e6;
 	text-transform: none;
 	display: inline;
 	position: relative;
 }
+.list.custom-list ul li a:hover {
+     font: 14px/1.2em 'Roboto', sans-serif;
+
+    color:#81A6DA;
+    text-decoration: underline;
+ }
+
 .thumbnail {
 	position: relative;
 	margin: 0;
@@ -1036,4 +1043,35 @@ customize
 .box-radius{
 	padding: 9px!important;
 	border-radius: 5px;
+}
+.box-vnits-tintuc{
+    height: 49px;
+    background: url(/assets/hoinghi.png) no-repeat scroll 0% 0%;
+    margin-left: -30px;
+    width: 126%;
+}
+.box-vnits-tuyensinh{
+    height: 49px;
+    background: url(/assets/thongbao.png) no-repeat scroll 0% 0%;
+    margin-left: -30px;
+    width: 126%;
+}
+.box-vnits-thongbao{
+    height: 49px;
+    background: url(/assets/tintuc.png) no-repeat scroll 0% 0%;
+    margin-left: -30px;
+    width: 126%;
+}
+.box-vnits-tuyendung{
+    height: 49px;
+    background: url(/assets/hocbong.png) no-repeat scroll 0% 0%;
+    margin-left: -30px;
+    width: 126%;
+}
+.box-a{
+    font:18px Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+    width: 280px; color: rgb(255, 255, 255);
+    float: left;
+    padding-top: 8px;
 }

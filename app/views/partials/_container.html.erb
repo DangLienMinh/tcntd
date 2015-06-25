@@ -6,20 +6,21 @@
     <div class="col-md-3">
       <div class="grey-box-icon border-box" >
 
-        <div style="height: 49px; background: transparent url(assets/thongbao.png) no-repeat scroll 0% 0%; margin-left: -30px; width: 126%;"><a style="font:18px Arial,Helvetica,sans-serif; text-transform: uppercase; width: 280px; color: rgb(255, 255, 255); float: left; padding-top: 8px;" href="#">Tuyển Sinh</a></div><!--icon box top -->
+        <div class="box-vnits-tuyensinh"><span class="box-a">Tuyển Sinh</span></div><!--icon box top -->
 
-        <ul class="list-unstyled list-spaces text-left">
+        <ul class="list-unstyled list-spaces text-left1">
           <% all_posts_tuyen_sinh.each do |post| %>
-              <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>          <% end %>
+              <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>
+          <% end %>
         </ul>
         <p><a href="#"><em><%= link_to "Xem thêm ..." ,posts_showalltuyensinh_path%></em></a></p>
       </div><!--grey box -->
     </div><!--/span3-->
     <div class="col-md-3">
       <div class="grey-box-icon" >
-        <div style="height: 49px; background: transparent url(assets/tintuc.png) no-repeat scroll 0% 0%; margin-left: -30px; width: 126%;"><a style="font:18px Arial,Helvetica,sans-serif; text-transform: uppercase; width: 280px; color: rgb(255, 255, 255); float: left; padding-top: 8px;" href="#">Thông Báo</a></div><!--icon box top -->
+        <div class="box-vnits-thongbao"><span class="box-a">Thông Báo</span></div><!--icon box top -->
 
-        <ul class="list-unstyled list-spaces text-left">
+        <ul class="list-unstyled list-spaces text-left1">
           <% all_posts_thong_bao.each do |post| %>
               <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>
           <% end %>
@@ -31,9 +32,9 @@
     </div><!--/span3-->
     <div class="col-md-3">
       <div class="grey-box-icon">
-        <div style="height: 49px; background: transparent url(assets/hoinghi.png) no-repeat scroll 0% 0%; margin-left: -30px; width: 126%;"><a style="font:18px Arial,Helvetica,sans-serif; text-transform: uppercase; width: 280px; color: rgb(255, 255, 255); float: left; padding-top: 8px;" href="#">Tin tức</a></div><!--icon box top -->
+        <div class="box-vnits-tintuc"><span class="box-a" >Tin tức</span></div><!--icon box top -->
 
-        <ul class="list-unstyled list-spaces text-left">
+        <ul class="list-unstyled list-spaces text-left1">
           <% all_posts_tin_tuc.each do |post| %>
               <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>
           <% end %>
@@ -43,9 +44,9 @@
     </div><!--/span3-->
     <div class="col-md-3">
       <div class="grey-box-icon">
-        <div style="height: 49px; background: transparent url(assets/hocbong.png) no-repeat scroll 0% 0%; margin-left: -30px; width: 126%;"><a style="font:18px Arial,Helvetica,sans-serif; text-transform: uppercase; width: 280px; color: rgb(255, 255, 255); float: left; padding-top: 8px;" href="#">Tuyển Dụng</a></div><!--icon box top -->
+        <div class="box-vnits-tuyendung"><span class="box-a">Tuyển Dụng</span></div><!--icon box top -->
 
-        <ul class="list-unstyled list-spaces text-left">
+        <ul class="list-unstyled list-spaces text-left1">
           <% all_posts_tuyen_dung.each do |post| %>
 
               <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>

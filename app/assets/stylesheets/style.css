@@ -963,13 +963,13 @@ list-style: none;
 .video-list-thumbs > li > a{
 	display:block;
 	position:relative;
-	background-color: #212121;
-	color: #fff;
+    box-shadow:0 2px 4px rgba(0,0,0,.3);
+	color: black;
 	padding: 8px;
 	border-radius:3px
 }
 .video-list-thumbs > li > a:hover{
-	background-color:#000;
+
 	transition:all 500ms ease;
 	box-shadow:0 2px 4px rgba(0,0,0,.3);
 	text-decoration:none

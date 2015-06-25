@@ -1,67 +1,110 @@
 # encoding: utf-8
+<style>
+    .effect5
+    {
+        position: relative;
+    }
+    .effect5:before, .effect5:after
+    {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 25px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width:300px;
+        background: #777;
+        -webkit-box-shadow: 0 35px 20px #777;
+        -moz-box-shadow: 0 35px 20px #777;
+        box-shadow: 0 35px 20px #777;
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+    .effect5:after
+    {
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        transform: rotate(8deg);
+        right: 10px;
+        left: auto;
+    }
+</style>
 <footer id="footer">
 
   <div class="container">
     <div class="row">
       <div class="footerbottom">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="footerwidget">
-            <h4>
+            <h4 style="text-transform: uppercase;">
               Đơn vị liên kết
             </h4>
             <div class="menu-course">
               <ul class="menu">
-                <li><a href="#">
-                  List of Technology
-                </a>
+                <li>
+                  <%= link_to "Bộ Giáo Dục & Đào Tạo","http://www.moet.gov.vn",target:"_blank"   %>
+
                 </li>
-                <li><a href="#">
-                  List of Business
-                </a>
+                <li>
+                  <%= link_to "Tổng Cục Dạy Nghề","http://tcdn.gov.vn",target:"_blank"   %>
+
+
                 </li>
-                <li><a href="#">
-                  List of Photography
-                </a>
+                <li>
+
+                  <%= link_to "UBND Quận Thủ Đức","http://www.thuduc.hochiminhcity.gov.vn",target:"_blank"   %>
+
                 </li>
-                <li><a href="#">
-                  List of Language
-                </a>
+                <li>
+                  <%= link_to "Báo Giáo Dục Online","http://www.giaoduc.edu.vn",target:"_blank"   %>
+
+                </li>
+                <li>
+                  <%= link_to "Báo Dân Trí","http://dantri.com.vn",target:"_blank"   %>
+
+
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="footerwidget">
             <h4>LIÊN HỆ</h4>
             <p>Trường Trung Cấp Nghề Thủ Đức</p>
             <div class="contact-info">
-              <i class="fa fa-map-marker"></i> Số 17, Đường 8, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br>
-              <i class="fa fa-phone"></i> (08) 36029585 - Fax: (08) 36029585 <br>
-              <i class="fa fa-envelope-o"></i> tcnthuduc@gmail.com
+              <i class="fa fa-map-marker fa-2x" style="color: #fb0a2a;"></i> Số 17, Đường 8, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br>
+              <i class="fa fa-phone fa-2x" style="color: #34ad00;" ></i> (08) 36029585 - Fax: (08) 36029585 <br>
+              <i class="fa fa-envelope-o fa-2x" style="color: #fcb314;"></i> tcnthuduc@gmail.com
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="footerwidget">
+        <div class="col-md-4 col-sm-6">
+          <div >
             <h4>BẢN ĐỒ</h4>
-            <p>Trường Trung Cấp Nghề Thủ Đức</p>
+
             <div class="contact-info">
-              <i class="fa fa-map-marker"></i> Số 17, Đường 8, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br>
-              <i class="fa fa-phone"></i> (08) 36029585 - Fax: (08) 36029585 <br>
-              <i class="fa fa-envelope-o"></i> tcnthuduc@gmail.com
-            </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.4457868917802!2d106.76601600000001!3d10.853659000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175279edf747bc1%3A0x1fb1f6f29f2cf70f!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIE5naOG7gSBUaOG7pyDEkOG7qWM!5e0!3m2!1svi!2s!4v1434771451847" width="390" height="150" frameborder="0" style="box-shadow: 0 3px 20px #777;"></iframe>
+
+              </div>
           </div><!-- end widget -->
         </div>
       </div>
     </div>
     <div class="social text-center">
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-flickr"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
+      <a href="#"><i class="fa fa-twitter"style="color: #5dd7fc"></i></a>
+      <a href="#"><i class="fa fa-facebook" style="color: rgb(59, 89, 152);"></i></a>
+      <a href="#"><i class="fa fa-dribbble" style="color: #EA4C89;" ></i></a>
+      <a href="#"><i class="fa fa-flickr" style="color: #1f8dd6;"></i></a>
+      <a href="#"><i class="fa fa-github" style="color: #ffa500;"></i></a>
     </div>
 
     <div class="clear"></div>
@@ -74,12 +117,12 @@
         <div class="col-md-6 panel">
           <div class="panel-body">
             <p class="simplenav">
-              <a href="index.html">Trang Chủ</a> |
+              <a href="<%= root_path  %>">Trang Chủ</a> |
               <a href="about.html">Giới Thiệu</a> |
               <a href="courses.html">Khoá Học</a> |
               <a href="price.html">Thư Viện</a> |
               <a href="videos.html">Hoạt Động</a> |
-              <a href="contact.html">Liên Hệ</a>
+              <%= link_to "Liên Hệ",:controller => "contacts",:action => "new" %>
             </p>
           </div>
           <div class="panel-body" style="padding-top: 10px;"> <p class="simplenav">
@@ -93,7 +136,7 @@
         <div class="col-md-6 panel">
           <div class="panel-body">
             <p class="text-right">
-              Copyright &copy; 2014. <a href="http://vnits.com.vn/" rel="develop">Website được phát triển và vận hành bới VNITS</a>
+              Copyright &copy; 2014-2015. <a href="http://vnits.com.vn/" rel="develop">Website được phát triển và vận hành bởi VNITS</a>
             </p>
 
           </div>

@@ -17,11 +17,14 @@
             <!-- /main -->
 
             <!-- Sidebar -->
-            <aside class="col-sm-4 sidebar sidebar-right">
-                <% @category.each do |cate| %>
+
+                <% @category.each do |cate| %>  <aside class="col-sm-4 sidebar sidebar-right box-shadow box-radius" style="margin-top: 30px;">
                     <% if !cate.posts.where("page_id=?",@department.id).empty? %>
-                        <div class="panel  box-shadow box-radius">
-                            <h4><%= cate.name %></h4>
+                        <div class="panel">
+                          <h4 style="background: #3D84E6 none repeat scroll 0% 0%;
+                                  color: #FFF;
+                                  padding: 10px;
+                                  text-transform: uppercase;margin-top: 0px;"><%= cate.name %></h4>
                             <ul class="list-unstyled list-spaces">
                                 <% cate.posts.where("page_id=?",@department.id).each do |post| %>
                                   <li><%= link_to post.name,post_path(post) %><br>
@@ -31,8 +34,9 @@
                             </ul>
                         </div>
                     <% end %>
+        </aside>
                 <% end %>
-            </aside>
+
             <!-- /Sidebar -->
 
         </div>

@@ -15,9 +15,16 @@ Rails.application.routes.draw do
   get 'posts/showalltuyendung'
   get 'posts/showallthongbao'
   get 'home/contact'
-
+  # post 'admin/login' => 'sessions#create'
+  # get 'admin/login' => 'sessions#create'
 ActiveAdmin.routes(self)
+  #devise_for :admin_users do get '/amdin/login' => 'sessions#create' end
+    
   devise_for :admin_users, ActiveAdmin::Devise.config
+  
+  #devise_for :users, controllers: { sessions: "sessions"}
+  #devise_for :admin_users, controllers: {sessions: "sessions"}
+  #devise_for :admin, controllers: { sessions: 'sessions' }
   #devise_for :admin, :controllers => { :sessions => "sessions" }
   get 'home/index'
 

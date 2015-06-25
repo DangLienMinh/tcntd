@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
           redirect_to contacts_new_path, :notice => "Cảm ơn bạn đã gửi liên hệ cho nhà trường !"
         else
           render "new"
-        end
+      end
     else
 
       flash[:error] = "Captcha nhập chưa đúng, Vui lòng nhập lại!"

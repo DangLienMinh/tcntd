@@ -18,8 +18,12 @@
         <li><a href="<%= root_path  %>">Trang Chủ</a></li>
         <% all_menu.each do |menu| %>
               <li class="dropdown">
-                <%= link_to "#{menu.name}<b class='caret'></b>".html_safe ,menu_path(menu),{:class => "dropdown-toggle","data-toggle" => "dropdown" }  
-                %>
+                <% if all_sub_menu(menu.id).length>0 %>
+                  <%= link_to "#{menu.name}<b class='caret'></b>".html_safe ,menu_path(menu),{:class => "dropdown-toggle","data-toggle" => "dropdown" }  
+                  %>
+              <% else%>
+                <%= link_to menu.name ,"#"%>
+              <% end %>
 
 
                 <ul class="dropdown-menu">

@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  menu priority: 3,label: "Quản lý bài viết"
+  menu priority: 5,label: "BÀI VIẾT"
  #menu :if => proc{ current_admin_user.is_admin? }
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

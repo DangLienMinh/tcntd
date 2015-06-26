@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Slidercontent do
-  menu priority: 6,:if => proc{ current_admin_user.is_admin? },label: "Quản lý slider"
+  menu priority: 3,:if => proc{ current_admin_user.is_admin? },label: "SLIDER"
 
 
 # See permitted parameters documentation:

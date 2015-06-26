@@ -1,8 +1,8 @@
 ActiveAdmin.register_page "Dashboard" do
   menu :if => proc{ current_admin_user.is_admin? }
-  menu priority: 1, label: "Quản lý chung"
+  menu priority: 1, label: "TRANG CHỦ - CMS"
 
-  content title: "CMS" do
+  content title: "CMS - HỆ QUẢN TRỊ NỘI DUNG" do
     if current_admin_user.is_admin==1
      columns do
        column do

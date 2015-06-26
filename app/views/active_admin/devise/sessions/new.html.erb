@@ -1,4 +1,4 @@
-<h2>Trang đăng nhập vào trungcapnghethuduc.vn</h2>
+<h2>ĐĂNG NHẬP HỆ QUẢN TRỊ NỘI DUNG TRƯỜNG TRUNG CẤP NGHỀ THỦ ĐỨC</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -11,7 +11,7 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
   <div class="field">
-      <%= f.label "Xác nhận bạn không phải là robot" %>
+      <%= f.label "Xác nhận không phải là robot" %>
       <%= recaptcha_tags %>
     </div>
 

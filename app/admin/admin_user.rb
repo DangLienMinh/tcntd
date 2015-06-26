@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  menu priority: 2,:if => proc{ current_admin_user.is_admin? },label: "Quản lý người dùng"
+  menu priority: 7,:if => proc{ current_admin_user.is_admin? },label: "TÀI KHOÁN NGƯỜI DÙNG"
   permit_params :email, :name, :password, :password_confirmation, :is_admin, :department_id
     index title: "Danh sách người dùng" do
       selectable_column

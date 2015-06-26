@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-menu priority: 5,:if => proc{ current_admin_user.is_admin? },label: "Quản lý trang"
+menu priority: 2,:if => proc{ current_admin_user.is_admin? },label: "TRANG"
 #menu false
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -59,7 +59,7 @@ controller do
   config.clear_action_items!
 
   action_item :only => :index do
-      link_to "Thêm trang" , "/admin/departments/new" 
+      link_to "Thêm trang" , "/admin/pages/new" 
   end
 
   show title:"Thông tin chi tiết" do |s|

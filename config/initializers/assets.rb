@@ -11,7 +11,7 @@ Rails.application.config.assets.precompile += %w( bootstrap-theme.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( camera.css )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
-Rails.application.config.assets.precompile += %w( jquery.contentcarousel.js )
+Rails.application.config.assets.precompile += %w( jquery.lbslider.js )
 
 Rails.application.config.assets.precompile += %w( modernizr-latest.js )
 Rails.application.config.assets.precompile += %w( jquery.min.js )

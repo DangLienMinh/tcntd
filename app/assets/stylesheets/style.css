@@ -1136,3 +1136,37 @@ customize
     margin-right: 1em; }
 .flickr_pagination .next_page {
     margin-left: 1em; }
+.effect5
+{
+    position: relative;
+}
+.effect5:before, .effect5:after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 25px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 35px 20px #777;
+    -moz-box-shadow: 0 35px 20px #777;
+    box-shadow: 0 35px 20px #777;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+.effect5:after
+{
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    transform: rotate(8deg);
+    right: 10px;
+    left: auto;
+}

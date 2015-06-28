@@ -23,7 +23,15 @@ menu priority: 2,:if => proc{ current_admin_user.is_admin? },label: "MENU"
 		  @page_title = "Cập nhật Menu: "+resource.name
 		end
 	end
-
+	form do |f|
+		f.inputs do
+			f.input :name,:label => "Tên Hiển Thị"
+			f.input :parent,:as=> :select,:label => "Menu cha", :collection => Menu.all,:include_blank =>"Không có menu cha"
+			f.input :order,:label => "Thứ Tự"
+			f.input :url,:label => "URL"
+		end
+		f.actions
+	end
 	index title: "Danh sách Menu" do
 		selectable_column
 		column "ID", :id

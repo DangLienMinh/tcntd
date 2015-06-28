@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   # end
 
   def all_menu
-    @menu=Menu.all.where(parent: 0).order(order: :asc)
+    @menu=Menu.all.where(parent: [0,nil]).order(order: :asc)
   end
 
   def all_sub_menu(parent_id)

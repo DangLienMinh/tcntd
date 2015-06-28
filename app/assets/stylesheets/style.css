@@ -1170,3 +1170,15 @@ customize
     right: 10px;
     left: auto;
 }
+.totop{
+    float: right;
+    bottom: 50px;
+    display: none;
+    height: 60px;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    width: 44px;
+    z-index: 1000;
+
+}

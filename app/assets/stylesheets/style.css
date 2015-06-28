@@ -1170,7 +1170,7 @@ customize
     right: 10px;
     left: auto;
 }
-.totop{
+.to-top{
     float: right;
     bottom: 50px;
     display: none;
@@ -1180,5 +1180,4 @@ customize
     right: 25px;
     width: 44px;
     z-index: 1000;
-
 }

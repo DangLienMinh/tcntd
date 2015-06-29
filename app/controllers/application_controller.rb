@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   helper_method :all_video
 
   def all_video
-    @video=Videohd.all
+    @video=Videohd.order('ordernum asc')
 
   end
 

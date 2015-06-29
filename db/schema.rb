@@ -169,4 +169,12 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "pic5_updated_at"
   end
 
+  create_table "videohds", force: :cascade do |t|
+    t.string   "caption"
+    t.string   "link"
+    t.integer  "ordernum"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

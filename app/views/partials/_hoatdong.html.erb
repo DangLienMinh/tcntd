@@ -8,65 +8,37 @@
     <h2><span>HOẠT ĐỘNG</span></h2>
 
     <div class="slider" >
-    <div class="pre-next-slide-hoat-dong">
-    <a href="#" class="sa-left"><i class="fa fa-chevron-left fa-2x"></i></a>  <a href="#" class="sa-right"><i class="fa fa-chevron-right fa-2x"></i></a>
-    </div>
+      <div class="pre-next-slide-hoat-dong">
+        <a href="#" class="sa-left"><i class="fa fa-chevron-left fa-2x"></i></a>  <a href="#" class="sa-right"><i class="fa fa-chevron-right fa-2x"></i></a>
+      </div>
 
       <div class="clear-both" ></div>
+
+
+
       <ul class="list-unstyled video-list-thumbs row" >
+        <% all_video.each do |v| %>
+            <li class="col-lg-4 col-md-4 col-sm-12" >
 
-        <li class="col-lg-4 col-md-4 col-sm-12" >
+              <a >
 
-          <a >
+                <div class="video-container" >
+                  <object type="application/x-shockwave-flash" data="<%=v.link %>" >
 
-            <div class="video-container" >
-              <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/VhtIydTmOVU" >
+                    <param name="movie" value="<%=v.link %>" />
+                    <param name="allowFullScreen" value="true">
 
-                <param name="movie" value="http://www.youtube.com/v/VhtIydTmOVU" />
+                  </object>
 
-
-              </object>
-
-            </div>
-            <h5>Trung cấp nghề thủ đức</h5>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-4 col-sm-12">
-          <a>
-
-
-            <div class="video-container">
-              <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/VhtIydTmOVU" >
-
-                <param name="movie" value="http://www.youtube.com/v/VhtIydTmOVU" />
-
-
-              </object>
-            </div>
-            <h5>Họp Phụ Huynh Đầu Năm học 2014</h5>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-4 col-sm-12">
-          <a>
-
-
-            <div class="video-container">
-              <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/VhtIydTmOVU" >
-
-                <param name="movie" value="http://www.youtube.com/v/VhtIydTmOVU" />
-
-
-              </object>
-            </div>
-            <h5>Văn nghệ chào mừng 20-11</h5>
-          </a>
-        </li>
-
+                </div>
+                <h5><%= v.caption %></h5>
+              </a>
+            </li>
+        <% end %>
       </ul>
 
 
-      </div>
-  </div>
+    </div>
   </div>
 </section>
 <%= javascript_include_tag "jquery.lbslider" %>

@@ -14,7 +14,12 @@ class ApplicationController < ActionController::Base
   helper_method :all_posts_tuyen_dung
   helper_method :all_posts_tin_tuc
   helper_method :all_slider
+  helper_method :all_video
 
+  def all_video
+    @video=Videohd.all
+
+  end
 
   def all_categories
     @categories=Category.all

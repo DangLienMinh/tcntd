@@ -35,7 +35,7 @@ ActiveAdmin.register Slidercontent do
 
   form :html => { :multipart => true } do |f|
     f.inputs do
-      f.input :link, :label => "Đường link"
+      f.input :link, :label => "Liên kết"
       f.input :topcaption, :label => "Dòng Chữ Trên"
       f.input :botcaption, :label => "Dòng Chữ Dưới"
       f.input :ordernum, :label => "STT",input_html: { min: '0', max: '5' }

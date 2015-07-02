@@ -126,6 +126,14 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
 
   add_index "pages", ["url"], name: "index_pages_on_url", unique: true, using: :btree
 
+  create_table "popups", force: :cascade do |t|
+    t.string   "caption"
+    t.string   "content"
+    t.integer  "trangthai"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "name",             null: false
     t.string   "summary",          null: false

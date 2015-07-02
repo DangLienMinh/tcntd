@@ -15,13 +15,17 @@ class ApplicationController < ActionController::Base
   helper_method :all_posts_tin_tuc
   helper_method :all_slider
   helper_method :all_video
+  helper_method :all_popup
   helper_method :cauhinh_trangchu
 
   def cauhinh_trangchu
     @con=Confighome.where(trangthai: 1)
 
   end
+  def all_popup
+    @con=Popup.where(trangthai: 1)
 
+  end
   def all_video
     @video=Videohd.order('ordernum asc')
 

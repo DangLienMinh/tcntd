@@ -20,7 +20,7 @@ ActiveAdmin.register Videohd do
   form :html => { :multipart => true } do |f|
     f.inputs do
       f.input :caption, :label => "Tiêu đề"
-      f.input :link, :label => "Đường link"
+      f.input :link, :label => "Liên kết"
       f.input :ordernum, :label => "STT"
     end
     f.actions

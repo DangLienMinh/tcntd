@@ -131,3 +131,40 @@
         });
     });
 </script>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
+<script>
+    jQuery('.slider').lbSlider({
+        leftBtn: '.sa-left',
+        rightBtn: '.sa-right',
+        visible: 3,
+        autoPlay: false,
+        autoPlayDelay: 5
+    });
+</script>
+<script>
+    jQuery(function(){
+
+        jQuery('#camera_wrap').camera({
+            fx: 'random',
+            transPeriod: 500,
+            time: 2000,
+            height: '400',
+            loader: 'false',
+            pagination: true,
+            thumbnails: true,
+            hover: true,
+            playPause: true,
+            navigation: true,
+            opacityOnGrid: false,
+            imagePath: 'assets/images/'
+
+        });
+
+    });
+
+</script>

@@ -77,6 +77,22 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "confighomes", force: :cascade do |t|
+    t.integer  "numslider"
+    t.integer  "numpostbox"
+    t.string   "muctieu"
+    t.string   "cacnghedt"
+    t.string   "diachi"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "linkfb"
+    t.string   "linktw"
+    t.string   "copyright"
+    t.integer  "trangthai"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "email"

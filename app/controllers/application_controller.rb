@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
   helper_method :all_posts_tin_tuc
   helper_method :all_slider
   helper_method :all_video
+  helper_method :cauhinh_trangchu
+
+  def cauhinh_trangchu
+    @con=Confighome.where(trangthai: 1)
+
+  end
 
   def all_video
     @video=Videohd.order('ordernum asc')
@@ -26,8 +32,9 @@ class ApplicationController < ActionController::Base
 
   end
   def all_posts_thong_bao
+    @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('2')
-    @post=@category.posts.order(created_at: :desc).limit(5)
+    @post=@category.posts.order(created_at: :desc).limit(@num)
   end
 
   # def all_phongban
@@ -51,27 +58,30 @@ class ApplicationController < ActionController::Base
   # end
   
   def all_posts_tuyen_sinh
+    @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('1')
-    @post=@category.posts.order(created_at: :desc).limit(5)
+    @post=@category.posts.order(created_at: :desc).limit(@num)
 
 
   end
 
   def all_posts_tin_tuc
+    @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('3')
-    @post=@category.posts.order(created_at: :desc).limit(5)
+    @post=@category.posts.order(created_at: :desc).limit(@num)
 
 
   end
   def all_posts_tuyen_dung
+    @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('4')
-    @post=@category.posts.order(created_at: :desc).limit(5)
+    @post=@category.posts.order(created_at: :desc).limit(@num)
 
 
   end
 
   def all_slider
-    @slider=Slidercontent.order('ordernum asc')
-
+   @num=cauhinh_trangchu.first.numslider
+    @slider=Slidercontent.order('ordernum asc').limit(@num)
   end
 end

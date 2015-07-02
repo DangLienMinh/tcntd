@@ -45,9 +45,13 @@
             <h4>LIÊN HỆ</h4>
             <p>Trường Trung Cấp Nghề Thủ Đức</p>
             <div class="contact-info">
-              <i class="fa fa-map-marker fa-2x" style="color: #fb0a2a;"></i> Số 17, Đường 8, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br>
-              <i class="fa fa-phone fa-2x" style="color: #34ad00;" ></i> (08) 36029585 - Fax: (08) 36029585 <br>
-              <i class="fa fa-envelope-o fa-2x" style="color: #fcb314;"></i> tcnthuduc@gmail.com
+              <% cauhinh_trangchu.each do |c| %>
+
+
+              <i class="fa fa-map-marker fa-2x" style="color: #fb0a2a;"></i> <%= raw(c.diachi) %><br>
+              <i class="fa fa-phone fa-2x" style="color: #34ad00;" ></i> <%= raw(c.phone) %> <br>
+              <i class="fa fa-envelope-o fa-2x" style="color: #fcb314;"></i> <%= raw(c.email) %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -65,11 +69,13 @@
       </div>
     </div>
     <div class="social text-center">
-      <a href="#"><i class="fa fa-twitter" style="color: #5dd7fc"></i></a>
-      <a href="#"><i class="fa fa-facebook" style="color: rgb(59, 89, 152);"></i></a>
+      <% cauhinh_trangchu.each do |c| %>
+      <a href="<%= raw(c.linktw) %>"><i class="fa fa-twitter" style="color: #5dd7fc"></i></a>
+      <a href="<%= raw(c.linkfb) %>"><i class="fa fa-facebook" style="color: rgb(59, 89, 152);"></i></a>
       <a href="#"><i class="fa fa-dribbble" style="color: #EA4C89;" ></i></a>
       <a href="#"><i class="fa fa-flickr" style="color: #1f8dd6;"></i></a>
       <a href="#"><i class="fa fa-github" style="color: #ffa500;"></i></a>
+      <% end %>
     </div>
 
     <div class="clear"></div>
@@ -97,7 +103,9 @@
         <div class="col-md-6 panel">
           <div class="panel-body">
             <p class="text-right">
-              Copyright &copy; 2014-2015. <a href="http://vnits.com.vn/" rel="author">Website được phát triển và vận hành bởi VNITS</a>
+
+                  <%= raw(cauhinh_trangchu.first.copyright) %>
+
             </p>
 
           </div>

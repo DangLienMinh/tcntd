@@ -8,11 +8,11 @@
 
         <h2 class="title-box_primary" style="margin-top: 0px;">MỤC TIÊU PHÁT TRIỂN</h2></div>
       <div style="padding: 9px;">
-      <p><span>- Dạy nghề từ hướng cung sang hướng cầu của thị trường lao động, bằng cách phát triển dạy nghề gắn chặt với yêu cầu chuyển dịch cơ cấu kinh tế, cơ cấu lao động và định hướng phát triển của Quận và Thành phố.</span></p>
 
-      <p>- Tiếp tục mở rộng ngành nghề, tăng số lượng, chất lượng và hiệu quả đào tạo theo yêu cầu của xã hội và doanh nghiệp ở cả các cấp trình độ đào tạo của trường: Trung cấp, sơ cấp và thường xuyên đáp ứng nhu cầu đa dạng và nâng cao khả năng phục vụ cộng đồng, góp phần đắc lực vào công cuộc Xóa đói giảm nghèo một cách bền vững, trong đó tập trung phát triển những nghề mới có nhu cầu lớn đáp ứng yêu cầu phát triển của Quận, Thành phố đồng thời có tính đến yêu cầu khu vực lân cận.</p>
-      <p>- Liên kết hợp tác với các trường, cơ sở dạy nghề, các doanh nghiệp trong và ngoài nước để chuyển giao công nghệ, phương pháp giảng dạy, chương trình đào tạo...</p>
-      <p>- Hợp tác nghiên cứu khoa học về dạy nghề, nghiên cứu ứng dụng các thành tựu khao học và công nghệ dạy nghề tiên tiến để nâng cao chất lượng dạy nghề.</p>
+        <% cauhinh_trangchu.each do |c| %>
+           <%= raw(c.muctieu) %>
+        <% end %>
+
        </div>
 </div>
 
@@ -22,16 +22,9 @@
       <div style="padding: 9px;">
       <div class="list styled custom-list">
         <ul>
-          <li><a title="" href="#">Thiết kế đồ họa</a></li>
-          <li><a title="" href="#">Lắp ráp cài đặt máy tính</a></li>
-          <li><a title="" href="#">Kế toán doanh nghiệp</a></li>
-          <li><a title="" href="#">Quản trị doanh nghiệp</a></li>
-          <li><a title="" href="#">Điện công nghiệp</a></li>
-          <li><a title="" href="#">Điện tử công nghiệp</a></li>
-          <li><a title="" href="#">Cắt gọt kim </a></li>
-          <li><a title="" href="#">Kỹ thuật máy lạnh và điều hòa không khí</a></li>
-          <li><a title="" href="#">Kỹ thuật máy lạnh và điều hòa không khí</a></li>
-
+          <% cauhinh_trangchu.each do |c| %>
+              <%= raw(c.cacnghedt) %>
+          <% end %>
 
         </ul>
       </div>

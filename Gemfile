@@ -6,7 +6,7 @@ gem 'rails', '4.2.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Use sqlite3 as the database for Active Record
 gem 'ckeditor'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip'
 gem 'aws-sdk'
 gem 'carrierwave'
 gem 'pg'

@@ -3,8 +3,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
       :storage => :s3,
       :s3_protocol => 'http',
+      :bucket => ENV['tcntd'],
       :s3_credentials => {
-          :bucket => ENV['tcntd'],
+
           :access_key_id => ENV['AKIAJKFIR5NYZRI2S3JA'],
           :secret_access_key => ENV['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']
       }

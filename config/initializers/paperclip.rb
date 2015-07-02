@@ -1,4 +1,11 @@
-
-Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
-Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
+Paperclip::Attachment.default_options.merge!(
+    :storage => :fog,
+    :fog_credentials => {
+        :provider => 'AWS',
+        :aws_access_key_id => ENV['AKIAJKFIR5NYZRI2S3JA'],
+        :aws_secret_access_key => ENV['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'],
+        :region => 'eu-west-1' # in case you need it
+    },
+    :fog_directory => ENV['tcntd'], # only one of those is needed but I don't remember which
+    :bucket => ENV['tcntd']
+)

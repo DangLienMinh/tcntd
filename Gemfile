@@ -7,7 +7,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Use sqlite3 as the database for Active Record
 gem 'ckeditor'
 gem 'paperclip'
-gem 'aws-sdk'
 gem 'carrierwave'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.4'

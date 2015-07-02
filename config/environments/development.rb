@@ -1,12 +1,19 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Amazon Web Services - S3
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => 'tcntd',
+          :s3_credentials => "#{Rails.root}/config/aws.yml",
+      }
+  }
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-  Paperclip.options[:command_path] = "/usr/local/bin/"
-  Paperclip.options[:command_path] = 'C:\GnuWin32\bin'
+
   # Do not eager load code on boot.
   config.eager_load = false
 

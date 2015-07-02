@@ -14,6 +14,7 @@ gem 'autoprefixer-rails'
 gem 'ransack'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'aws-sdk'
 gem 'stringex'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

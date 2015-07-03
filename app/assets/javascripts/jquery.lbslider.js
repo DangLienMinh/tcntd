@@ -3,7 +3,7 @@
         var options = $.extend({
             leftBtn: '.leftBtn',
             rightBtn: '.rightBtn',
-            visible: 3,
+            visible: 4,
             autoPlay: false,  // true or false
             autoPlayDelay: 10  // delay in seconds
         }, options);
@@ -20,7 +20,8 @@
             var el = $(this).children('ul');
             el.css({
                 position: 'relative',
-                left: '0'
+                left: '0',
+
             });
             var leftBtn = $(options.leftBtn), rightBtn = $(options.rightBtn);
 

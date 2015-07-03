@@ -29,15 +29,20 @@ ActiveAdmin.register Confighome do
     f.inputs  do
       f.input :numslider, :label => "Số slider hiển thị"
       f.input :numpostbox, :label => "Số post hiển thị"
-      f.cktext_area :muctieu, :class => 'ckeditor', :label => "Mục tiêu"
+      f.label :muctieu,"Mục Tiêu :"
+      f.cktext_area :muctieu, :class => 'ckeditor', :label_inline => "Mục tiêu"
+      f.label :cacnghedt,"Các nghề đào tạo :"
       f.cktext_area :cacnghedt, :class => 'ckeditor', :label => "Các nghề đào tạo"
-      f.cktext_area :copyright, :class => 'ckeditor', :label => "Thông tin copyright"
-      f.cktext_area :diachi, :class => 'ckeditor', :label => "Địa chỉ"
+      f.input :copyright, :label => "Thông tin copyright"
+      f.input :diachi, :label => "Địa chỉ"
       f.input :phone, :label => "SĐT"
       f.input :email, :label => "Email"
       f.input :linkfb, :label => "Liên kết Facebook"
       f.input :linktw, :label => "Liên kết Twiter"
-      f.check_box :trangthai,:label =>"Trạng thái"
+      f.label :trangthai,"Trạng Thái :"
+      f.check_box :trangthai
+
+
 
     end
     f.actions

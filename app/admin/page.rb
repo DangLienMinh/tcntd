@@ -51,6 +51,7 @@ controller do
       f.input :name, :label => "Tên trang"
       f.input :slogan, :label => "Slogan"
       f.input :menu, :label => "Menu", :include_blank => false
+      f.label :description,"Mô tả :"
       f.cktext_area :description, :class => 'ckeditor', :label => "Mô tả"
       end
       f.actions

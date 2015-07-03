@@ -12,7 +12,7 @@ ActiveAdmin.register Popup do
     #   link_to(:title, admin_post_path(s.title))
     # end
     column :caption
-    column :content
+    raw(column :content)
     column :trangthai
 
     actions
@@ -21,7 +21,9 @@ ActiveAdmin.register Popup do
   form :html => { :multipart => true } do |f|
     f.inputs do
       f.input :caption, :label => "Tiêu đề"
+      f.label :content,"Nội dung :"
       f.cktext_area :content, :class => 'ckeditor', :label => "Nội dung"
+      f.label :trangthai,"Trạng thái :"
       f.check_box :trangthai, :label => "Trạng thái"
     end
     f.actions

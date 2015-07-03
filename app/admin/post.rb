@@ -91,6 +91,7 @@ ActiveAdmin.register Post do
       
       f.input :pic, :as => :file, :label => "Hình ảnh",:hint=>image_tag(f.object.pic.url(:thumb))
       f.input :summary, :label => "Tóm tắt"
+      f.label :muctieu,"Nội dung :"
       f.cktext_area :content, :class => 'ckeditor', :label => "Nội dung"
       end
       f.actions

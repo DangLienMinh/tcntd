@@ -22,5 +22,5 @@ Rails.application.config.assets.precompile += %w( camera.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( custom.js )
 Rails.application.config.assets.precompile += %w( fancybox/jquery.fancybox.pack.js )
-
+Rails.application.config.assets.precompile += %w( jquery.cookie.js )
 

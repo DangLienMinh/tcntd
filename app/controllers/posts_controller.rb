@@ -1,4 +1,6 @@
+
 class PostsController < ApplicationController
+
   def permitted_params
     params.permit post: [:title, :image,:content,:summary,:category_id, :author_id,:admin_user_id]
   end
@@ -10,6 +12,7 @@ class PostsController < ApplicationController
     @allpost=@category.posts.where("id != ? and page_id=?",@post.id,@post.page_id).order(:created_at).limit(5)
   end
   def showalltintuc
+
     @posttd=Post.where("category_id = ?",3).order(:created_at).paginate(:page => params[:page], :per_page => 4)
   end
   def showallthongbao

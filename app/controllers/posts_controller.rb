@@ -1,4 +1,3 @@
-
 class PostsController < ApplicationController
 
   def permitted_params

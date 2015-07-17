@@ -1,5 +1,4 @@
 
-# encoding: utf-8
 <header id="head" class="secondary">
   <div class="container">
     <h1 style="margin-top: 20px;">TIN TỨC</h1>
@@ -12,12 +11,15 @@
     <!-- main content -->
     <section class="col-sm-8 maincontent" >
       <h3><%= @post.name %></h3>
-      <small><%= @post.created_at.strftime("%b %d. %Y") %></small>
-      <p>Create By  :<%= @post.admin_user.name %></p>
+     <small>Ngày đăng :<%= @post.created_at.strftime("%d/%m/%Y") %></small>
+
       <p><%= raw(@post.content) %></p>
+      <p>Người đăng :<%= @post.admin_user.name %></p>
+
 
 
     </section>
+ <% if @allpost.count >= 1 %>
     <aside class="col-sm-4 sidebar sidebar-right box-shadow box-radius" style="margin-top: 30px;">
 
       <div class="panel">
@@ -36,7 +38,7 @@
       </div>
 
     </aside>
-
+<% end %>
   </div>
 </section>
 

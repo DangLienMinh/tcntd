@@ -210,6 +210,8 @@ ul, .list.custom-list ul {
 	width: 37px;
 	height: 33px;
 	position: absolute;
+margin-left: 5px;
+margin-top: -5px;
 }
 .list.custom-list ul li a {
 	font: 14px/1.2em 'Roboto', sans-serif;

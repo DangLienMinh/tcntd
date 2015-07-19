@@ -1,5 +1,6 @@
 ActiveAdmin.register Post do
   menu priority: 5,label: "BÀI VIẾT"
+config.sort_order = "is_new_desc"
  #menu :if => proc{ current_admin_user.is_admin? }
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -65,7 +66,7 @@ ActiveAdmin.register Post do
     column "Image" do |m|
       m.pic? ? image_tag(m.pic.url,width:'100', height: '100') : content_tag(:span, "Chưa có dữ liệu")
     end
-    column "Bài viết mới" do |m|
+    column "Bài viết mới", sortable: :is_new do |m|
       m.is_new? ? "Bài mới" : "Bài cũ"
     end
     column "Ngày tạo",:created_at

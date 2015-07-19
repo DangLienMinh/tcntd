@@ -14,7 +14,7 @@
      <small>Ngày đăng :<%= @post.created_at.strftime("%d/%m/%Y") %></small>
 
       <p><%= raw(@post.content) %></p>
-      <p>Người đăng :<%= @post.admin_user.name %></p>
+      <p style="float:right;font-size:12px;font-weight:bold;">Người đăng: <%= @post.admin_user.name %></p>
 
 
 

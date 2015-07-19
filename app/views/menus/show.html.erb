@@ -6,7 +6,6 @@
                 </div>
     </header>
 
-
     <!-- container -->
     <section class="container" style="padding-top: 20px;">
         <div class="row">
@@ -28,7 +27,7 @@
                             <ul class="list-unstyled list-spaces">
                                 <% cate.posts.where("page_id=?",@department.id).each do |post| %>
                                   <li><%= link_to post.name,post_path(post) %><br>
-                                    <span class="small text-muted"><%= post.summary %></span>
+                                    
                                   </li>
                                 <% end %>
                             </ul>

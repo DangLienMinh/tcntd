@@ -204,6 +204,13 @@ ul, .list.custom-list ul {
 	position: relative;
 	/*background: url(../images/arrow.png) no-repeat 0 11px;*/
 }
+.new_class{
+	background-image: url("new_6.gif");
+	background-repeat: no-repeat;
+	width: 37px;
+	height: 33px;
+	position: absolute;
+}
 .list.custom-list ul li a {
 	font: 14px/1.2em 'Roboto', sans-serif;
 	color:#3d84e6;

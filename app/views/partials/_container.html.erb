@@ -10,7 +10,10 @@
 
         <ul class="list-unstyled list-spaces text-left1">
           <% all_posts_tuyen_sinh.each do |post| %>
-              <li><%= link_to truncate(post.name,:length=>75),post_path(post) %></li>
+              <li style="position:relative;"><%= link_to truncate(post.name,:length=>75),post_path(post) %>
+                 <span class="new_class"></span>
+              </li>
+
           <% end %>
         </ul>
         <p><em><%= link_to "Xem thêm ..." ,posts_showalltuyensinh_path%></em></p>

@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   def all_posts_thong_bao
     @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('2')
-    @post=@category.posts.order(created_at: :desc).limit(@num)
+    @post=@category.posts.order(is_new: :desc).limit(@num)
   end
 
   # def all_phongban
@@ -64,7 +64,7 @@ class ApplicationController < ActionController::Base
   def all_posts_tuyen_sinh
     @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('1')
-    @post=@category.posts.order(created_at: :desc).limit(@num)
+    @post=@category.posts.order(is_new: :desc).limit(@num)
 
 
   end
@@ -72,14 +72,14 @@ class ApplicationController < ActionController::Base
   def all_posts_tin_tuc
     @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('3')
-    @post=@category.posts.order(created_at: :desc).limit(@num)
+    @post=@category.posts.order(is_new: :desc).limit(@num)
 
 
   end
   def all_posts_tuyen_dung
     @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('4')
-    @post=@category.posts.order(created_at: :desc).limit(@num)
+    @post=@category.posts.order(is_new: :desc).limit(@num)
 
 
   end

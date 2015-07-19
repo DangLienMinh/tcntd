@@ -17,7 +17,7 @@ ActiveAdmin.register Post do
   controller do
     skip_before_filter :getActiveProjects
     def permitted_params
-      params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :page_id]
+      params.permit post: [:name, :pic, :summary, :content, :category_id, :admin_user_id, :page_id, :is_new]
     end
     def scoped_collection
       # some stuffs
@@ -65,6 +65,9 @@ ActiveAdmin.register Post do
     column "Image" do |m|
       m.pic? ? image_tag(m.pic.url,width:'100', height: '100') : content_tag(:span, "Chưa có dữ liệu")
     end
+    column "Bài viết mới" do |m|
+      m.is_new? ? "Bài mới" : "Bài cũ"
+    end
     column "Ngày tạo",:created_at
     column "" do |resource|
       links = ''.html_safe
@@ -88,7 +91,7 @@ ActiveAdmin.register Post do
         f.input :admin_user, :label => "Tác giả", collection: AdminUser.where(id: current_admin_user.id), :selected => current_admin_user.id, :include_blank => false
         f.input :page, :label => "Phòng ban", collection: Page.where(id: current_admin_user.page_id), :selected => current_admin_user.page_id, :include_blank => false
       end
-      
+      f.input :is_new, :label => "Là bài viết mới", :as => :radio, :collection =>[['Bài cũ', 0],['Bài mới', 1]]
       f.input :pic, :as => :file, :label => "Hình ảnh",:hint=>image_tag(f.object.pic.url(:thumb))
       f.input :summary, :label => "Tóm tắt"
       f.label :muctieu,"Nội dung :"

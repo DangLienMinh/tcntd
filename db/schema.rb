@@ -135,19 +135,20 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "name",             null: false
-    t.string   "summary",          null: false
-    t.text     "content",          null: false
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "category_id",      null: false
-    t.integer  "admin_user_id",    null: false
+    t.string   "name",                         null: false
+    t.string   "summary",                      null: false
+    t.text     "content",                      null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "category_id",                  null: false
+    t.integer  "admin_user_id",                null: false
     t.string   "pic_file_name"
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
-    t.integer  "page_id",          null: false
+    t.integer  "page_id",                      null: false
     t.string   "url"
+    t.integer  "is_new",           default: 0
   end
 
   add_index "posts", ["url"], name: "index_posts_on_url", unique: true, using: :btree

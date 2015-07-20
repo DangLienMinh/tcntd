@@ -11,13 +11,16 @@
     <!-- main content -->
     <section class="col-sm-8 maincontent" >
       <h3><%= @post.name %></h3>
-      <small>Ngày đăng :<%= @post.created_at.strftime("%d/%m/%Y") %></small>
+
+     <small>Ngày đăng :<%= @post.created_at.strftime("%d/%m/%Y") %></small>
 
       <p><%= raw(@post.content) %></p>
-      <p style="text-align: right;">Người đăng :<%= @post.admin_user.name %></p>
+      <p style="float:right;font-size:12px;font-weight:bold;">Người đăng: <%= @post.admin_user.name %></p>
 
     </section>
-    <% if @allpost.count >= 1 %>
+
+ <% if @allpost.count >= 1 %>
+
     <aside class="col-sm-4 sidebar sidebar-right box-shadow box-radius" style="margin-top: 30px;">
 
       <div class="panel">
@@ -37,6 +40,7 @@
 
     </aside>
     <% end %>
+
   </div>
 </section>
 

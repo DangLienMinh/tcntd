@@ -41,8 +41,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+platforms :ruby do # linux
+  gem 'unicorn'
+end
 
+platforms :mswin do
+  # gems specific to windows
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

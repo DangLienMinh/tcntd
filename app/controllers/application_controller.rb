@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   def all_posts_thong_bao
     @num=cauhinh_trangchu.first.numpostbox
     @category=Category.find('2')
-    @post=@category.posts.order(is_new: :desc).limit(@num)
+    @post=@category.posts.order(is_new: :desc, created_at: :desc ).limit(@num)
   end
 
   # def all_phongban

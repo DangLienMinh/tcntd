@@ -20,7 +20,7 @@
 
 
           <%  @posttd.each do |tt| %>
-              <li><%= link_to truncate(tt.name,:length=>75),posts_show_path(:id=>tt.id) %>
+              <li><%= link_to truncate(tt.name,:length=>75),post_path(tt) %>
                 <% if  tt.is_new? %>
                     <span class="new_class"></span>
                 <% end %></li>

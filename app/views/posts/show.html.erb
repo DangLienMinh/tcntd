@@ -31,7 +31,7 @@
         <ul class="list-unstyled list-spaces">
 
           <% @allpost.each do |post| %>
-              <li><%= link_to post.name,posts_show_path(:id=>post.id) %></li>
+              <li><%= link_to post.name,post_path(post) %></li>
           <% end %>
 
 

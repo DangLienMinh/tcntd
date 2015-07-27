@@ -36,7 +36,11 @@ class ApplicationController < ActionController::Base
 
   end
   def all_posts_thong_bao
-    @num=cauhinh_trangchu.first.numpostbox
+    if cauhinh_trangchu.first
+      @num=cauhinh_trangchu.first.numpostbox
+    else
+      @num=5
+    end
     @category=Category.find('2')
     @post=@category.posts.order(is_new: :desc, created_at: :desc).limit(@num)
   end
@@ -62,7 +66,11 @@ class ApplicationController < ActionController::Base
   # end
   
   def all_posts_tuyen_sinh
-    @num=cauhinh_trangchu.first.numpostbox
+    if cauhinh_trangchu.first
+      @num=cauhinh_trangchu.first.numpostbox
+    else
+      @num=5
+    end
     @category=Category.find('1')
     @post=@category.posts.order(is_new: :desc, created_at: :desc).limit(@num)
 
@@ -70,14 +78,23 @@ class ApplicationController < ActionController::Base
   end
 
   def all_posts_tin_tuc
-    @num=cauhinh_trangchu.first.numpostbox
+    if cauhinh_trangchu.first
+      @num=cauhinh_trangchu.first.numpostbox
+    else
+      @num=5
+    end
     @category=Category.find('3')
     @post=@category.posts.order(is_new: :desc, created_at: :desc).limit(@num)
 
 
   end
   def all_posts_tuyen_dung
-    @num=cauhinh_trangchu.first.numpostbox
+
+    if cauhinh_trangchu.first
+      @num=cauhinh_trangchu.first.numpostbox
+    else
+      @num=5
+    end
     @category=Category.find('4')
     @post=@category.posts.order(is_new: :desc, created_at: :desc).limit(@num)
 
@@ -85,7 +102,11 @@ class ApplicationController < ActionController::Base
   end
 
   def all_slider
-   @num=cauhinh_trangchu.first.numslider
-    @slider=Slidercontent.order('ordernum asc').limit(@num)
+    if cauhinh_trangchu.first
+      @num=cauhinh_trangchu.first.numslider
+      else
+        @num=5
+      end
+    @slider=Slidercontent.order('ordernum desc').limit(@num)
   end
 end

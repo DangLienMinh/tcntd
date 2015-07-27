@@ -28,3 +28,6 @@ en:
   time:
     formats:
       long: "%d-%m-%Y %H:%M:%S"
+  hello: "Hello world"
+  errors:
+    format: "%{message}"

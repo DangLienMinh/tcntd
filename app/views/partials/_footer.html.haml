@@ -1,0 +1,130 @@
+%footer#footer
+  .container
+    .row
+      .footerbottom
+        .col-md-4.col-sm-6
+          .footerwidget
+            %h4{:style => "text-transform: uppercase;"}
+              Đơn vị liên kết
+            .menu-course
+              %ul.menu
+                %li
+                  = link_to "Bộ Giáo Dục & Đào Tạo","http://www.moet.gov.vn",target:"_blank"
+                %li
+                  = link_to "Tổng Cục Dạy Nghề","http://tcdn.gov.vn",target:"_blank"
+                %li
+                  = link_to "UBND Quận Thủ Đức","http://www.thuduc.hochiminhcity.gov.vn",target:"_blank"
+                %li
+                  = link_to "Báo Giáo Dục Online","http://www.giaoduc.edu.vn",target:"_blank"
+                %li
+                  = link_to "Báo Dân Trí","http://dantri.com.vn",target:"_blank"
+        .col-md-4.col-sm-6
+          .footerwidget
+            %h4 LIÊN HỆ
+            %p Trường Trung Cấp Nghề Thủ Đức
+            .contact-info
+              - if cauhinh_trangchu
+                - cauhinh_trangchu.each do |c|
+                  %i.fa.fa-map-marker.fa-2x{:style => "color: #fb0a2a;"}
+                  = raw(c.diachi)
+                  %br
+                    %i.fa.fa-phone.fa-2x{:style => "color: #34ad00;"}
+                    = raw(c.phone)
+                    %br
+                      %i.fa.fa-envelope-o.fa-2x{:style => "color: #fcb314;"}
+                      = raw(c.email)
+                  
+        .col-md-4.col-sm-6
+          %div
+            %h4 BẢN ĐỒ
+            .contact-info
+              .video-container
+                %iframe{:height => "200", :src => "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.4457868917802!2d106.76601600000001!3d10.853659000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175279edf747bc1%3A0x1fb1f6f29f2cf70f!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIE5naOG7gSBUaOG7pyDEkOG7qWM!5e0!3m2!1svi!2s!4v1434771451847", :style => "border: 0;", :width => "390"}
+          / end widget
+    .social.text-center
+      - if cauhinh_trangchu
+        - cauhinh_trangchu.each do |c|
+          %a{:href => raw(c.linktw)}
+            %i.fa.fa-twitter{:style => "color: #5dd7fc"}
+          %a{:href => raw(c.linkfb)}
+            %i.fa.fa-facebook{:style => "color: rgb(59, 89, 152);"}
+          %a{:href => "#"}
+            %i.fa.fa-dribbble{:style => "color: #EA4C89;"}
+          %a{:href => "#"}
+            %i.fa.fa-flickr{:style => "color: #1f8dd6;"}
+          %a{:href => "#"}
+            %i.fa.fa-github{:style => "color: #ffa500;"}
+      
+    .clear
+  .footer2
+    .container
+      .row
+        .col-md-6.panel
+          .panel-body
+            %p.simplenav
+              %a{:href => root_path} Trang Chủ
+              |
+              
+              \#{link_to "Liên Hệ",:controller => "contacts",:action => "new"}
+          .panel-body{:style => "padding-top: 10px;"}
+            %p.simplenav
+        .col-md-6.panel
+          .panel-body
+            %p.text-right
+              - if cauhinh_trangchu.first
+                = raw(cauhinh_trangchu.first.copyright)
+#goTop.to-top
+  %img{:alt => "", :src => image_url('topbutton.png')}/
+:javascript
+  $(function () {
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 250) $('#goTop').fadeIn();
+          else $('#goTop').fadeOut();
+      });
+      $('#goTop').click(function () {
+          $('body,html').animate({ scrollTop:0 }, 'slow');
+      });
+  });
+:javascript
+  $(document).ready(function() {
+      if($.cookie('msg') == null)
+      {
+          $('#myModal').modal('show');
+          $.cookie('msg', 'str');
+      }
+      else
+      {
+          $("div#myModal.modal").css('display','none');
+      }
+
+
+  });
+
+:javascript
+  jQuery('.slider').lbSlider({
+      leftBtn: '.sa-left',
+      rightBtn: '.sa-right',
+      visible: 4,
+      autoPlay: false,
+      autoPlayDelay: 5
+  });
+:javascript
+  jQuery(function(){
+
+      jQuery('#camera_wrap').camera({
+          fx: 'random',
+          transPeriod: 500,
+          time: 2000,
+          height: '400',
+          loader: 'false',
+          pagination: true,
+          thumbnails: true,
+          hover: true,
+          playPause: true,
+          navigation: true,
+          opacityOnGrid: false,
+          imagePath: 'assets/images/'
+
+      });
+
+  });

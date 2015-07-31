@@ -8,6 +8,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'ckeditor'
 gem 'paperclip'
 gem 'carrierwave'
+gem 'haml'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'

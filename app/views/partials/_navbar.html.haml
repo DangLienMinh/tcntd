@@ -1,0 +1,42 @@
+%body
+  - all_popup.each do |p|
+    #myModal.modal.fade.bs-example-modal-lg{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h4#myModalLabel.modal-title= p.caption
+          .modal-body
+            = raw(p.content)
+  .navbar.navbar-inverse
+    .container
+      .navbar-header
+        / Button for smallest screens
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => root_path}
+          = image_tag "logo.png"
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.pull-right.mainNav
+          %li
+            %a{:href => root_path} Trang Chủ
+          - all_menu.each do |menu|
+            %li.dropdown
+              - if all_sub_menu(menu.id).length>0
+                = link_to "#{menu.name}<b class='caret'></b>".html_safe ,menu_path(menu),{:class => "dropdown-toggle","data-toggle" => "dropdown" }
+              - else
+                = link_to menu.name ,"#"
+              %ul.dropdown-menu
+                - all_sub_menu(menu.id).each do |sub|
+                  - if all_sub_menu(sub.id).length>0
+                    %li.dropdown-submenu
+                      = link_to sub.name,menu_path(sub)
+                      %ul.dropdown-menu
+                        - all_sub_menu(sub.id).each do |sub1|
+                          %li{:style => " border-bottom: 2px solid #ffffff;"}= link_to sub1.name,menu_path(sub1)
+                  - else
+                    %li
+                      = link_to sub.name ,menu_path(sub)
+          %li= link_to "Liên Hệ",:controller => "contacts",:action => "new"

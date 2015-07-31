@@ -1,0 +1,20 @@
+﻿%header#head.secondary
+  .container
+    %h1{:style => "margin-top: 20px;"} TIN TỨC
+%section.container
+  .row
+    / main content
+    %section.col-sm-8.maincontent
+      %h3= @post.name
+      %small
+        Ngày đăng :#{@post.created_at.strftime("%d/%m/%Y")}
+      %p= raw(@post.content)
+      %p{:style => "float:right;font-size:12px;font-weight:bold;"}
+        Người đăng: #{@post.admin_user.name}
+    - if @allpost.count >= 1
+      %aside.col-sm-4.sidebar.sidebar-right.box-shadow.box-radius{:style => "margin-top: 30px;"}
+        .panel
+          %h4{:style => "background: #3D84E6 none repeat scroll 0% 0%;color: #FFF;padding: 10px;text-transform: uppercase;margin-top: 0px;"}= @category.name
+          %ul.list-unstyled.list-spaces
+            - @allpost.each do |post|
+              %li= link_to post.name,post_path(post)

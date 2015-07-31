@@ -13,8 +13,8 @@ stderr_path "/var/www/tcntd/log/unicorn.log"
 stdout_path "/var/www/tcntd/log/unicorn.log"
 
 # Unicorn socket
-listen "/var/run/unicorn.[tcntd].sock"
-listen "/var/run/unicorn.tcntd.sock"
+listen "/var/www/unicorn.[tcntd].sock"
+listen "/var/www/unicorn.tcntd.sock"
 
 # Number of processes
 # worker_processes 4

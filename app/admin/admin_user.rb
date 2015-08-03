@@ -1,6 +1,6 @@
 ActiveAdmin.register AdminUser do
   menu priority: 7,:if => proc{ current_admin_user.is_admin? },label: "TÀI KHOÁN NGƯỜI DÙNG"
-  permit_params :email, :name, :password, :password_confirmation, :is_admin, :department_id
+  permit_params :email, :name, :password, :password_confirmation, :is_admin, :page_id
     index title: "Danh sách người dùng" do
       selectable_column
       column "Email",:email do |email|
@@ -12,7 +12,7 @@ ActiveAdmin.register AdminUser do
       column "Quản trị" do |m|
       m.is_admin? ? "Quản trị" : "Người dùng"
     end
-      column "Trang",:page
+      column "Phòng ban",:page
       column "" do |resource|
         links = ''.html_safe
         links += link_to 'Hiển thị', resource_path(resource), :class => "member_link view_link"
@@ -34,19 +34,21 @@ ActiveAdmin.register AdminUser do
       f.input :name,:label => "Họ tên"
       f.input :password,:label => "Mật khẩu"
       f.input :password_confirmation,:label => "Nhập lại mật khẩu"
-      f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]], :input_html => {
-        :onchange => "
-          $('.choices-group').change(function(){
-            if($('.choice input:checked').val()==1){
-             $('#admin_user_page_id').parent().hide();
-             $('#admin_user_page_id').val(null);
-            }else{
-              $('#admin_user_page_id').parent().show(); 
-              $('#admin_user_page_id').val($('#admin_user_page_id option:first').val());
-            }
-          });
-        "}
-      f.input :page,:label => "Trang", :include_blank => false
+      if current_admin_user.is_admin?
+        f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]], :input_html => {
+          :onchange => "
+            $('.choices-group').change(function(){
+              if($('.choice input:checked').val()==1){
+               $('#admin_user_page_id').parent().hide();
+               $('#admin_user_page_id').val(null);
+              }else{
+                $('#admin_user_page_id').parent().show(); 
+                $('#admin_user_page_id').val($('#admin_user_page_id option:first').val());
+              }
+            });
+          "}
+        f.input :page,:label => "Trang", :include_blank => false
+      end
     end
     f.actions
   end
@@ -55,6 +57,9 @@ ActiveAdmin.register AdminUser do
 
   action_item :only => :index do
       link_to "Thêm người dùng" , "/admin/admin_users/new" 
+  end
+  action_item :only => :show do
+      link_to "Thay đổi thông tin cá nhân",edit_admin_admin_user_path
   end
 
   show title: "Thông tin chi tiết" do |s|
@@ -78,7 +83,7 @@ ActiveAdmin.register AdminUser do
         row "Là quản trị hệ thống" do
           s.is_admin? ? "Quản trị" : "Người dùng"
         end
-        row "Trang" do
+        row "Phòng ban" do
           s.page
         end
       end
@@ -90,6 +95,7 @@ ActiveAdmin.register AdminUser do
     def edit
       # use resource.some_method to access information about what you're editing
       @page_title = "Cập nhật thông tin của "+resource.name
+      
     end
   end
 end

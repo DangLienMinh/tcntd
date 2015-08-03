@@ -32,8 +32,9 @@ ActiveAdmin.register AdminUser do
     f.inputs "Nhập thông tin chi tiết" do
       f.input :email,:label => "Email"
       f.input :name,:label => "Họ tên"
-      f.input :password,:label => "Mật khẩu"
-      f.input :password_confirmation,:label => "Nhập lại mật khẩu"
+      f.input :password_current,:label => "Mật khẩu hiện tại"
+      f.input :password,:label => "Mật khẩu mới"
+      f.input :password_confirmation,:label => "Nhập lại mật khẩu mới"
       if current_admin_user.is_admin?
         f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]], :input_html => {
           :onchange => "
@@ -95,7 +96,31 @@ ActiveAdmin.register AdminUser do
     def edit
       # use resource.some_method to access information about what you're editing
       @page_title = "Cập nhật thông tin của "+resource.name
-      
+    end
+
+    def update
+      # get the currently logged in AdminUser's id
+      current_id = current_admin_user.id
+      # load the AdminUser being updated
+      @admin_user = AdminUser.find(params[:id])
+      @current_pass=params[:password_current].to_s
+      # update the AdminUser with new attributes
+      # if successful, this will sign out the AdminUser being updated
+      if @admin_user.valid_password?(@current_pass)
+        if @admin_user.update_attributes(permitted_params[:admin_user])
+          # if the updated AdminUser was the currently logged in AdminUser, sign them back in
+          if @admin_user.id == current_id
+            sign_in(AdminUser.find(current_id), :bypass => true)
+          end
+          flash[:notice] = I18n.t('devise.passwords.updated_not_active')
+          redirect_to '/admin/admin_users'
+        # display errors
+        else
+          render :action => :edit
+        end
+      else
+        render :action => :edit
+      end
     end
   end
 end

@@ -12,7 +12,7 @@ ActiveAdmin.register AdminUser do
       column "Quản trị" do |m|
       m.is_admin? ? "Quản trị" : "Người dùng"
     end
-      column "Trang",:page
+      column "Phòng ban",:page
       column "" do |resource|
         links = ''.html_safe
         links += link_to 'Hiển thị', resource_path(resource), :class => "member_link view_link"
@@ -83,7 +83,7 @@ ActiveAdmin.register AdminUser do
         row "Là quản trị hệ thống" do
           s.is_admin? ? "Quản trị" : "Người dùng"
         end
-        row "Trang" do
+        row "Phòng ban" do
           s.page
         end
       end

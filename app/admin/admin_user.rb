@@ -1,6 +1,9 @@
 ActiveAdmin.register AdminUser do
   menu priority: 7,:if => proc{ current_admin_user.is_admin? },label: "TÀI KHOÁN NGƯỜI DÙNG"
-  permit_params :email, :name, :password, :password_confirmation, :is_admin, :department_id
+  action_item only:[:show] do
+    link_to "Message Customers", new_admin_share_blast_path(share_blast:{share_id:share})
+  end
+  permit_params :email, :name, :password, :password_confirmation, :is_admin, :page_id
     index title: "Danh sách người dùng" do
       selectable_column
       column "Email",:email do |email|
@@ -32,8 +35,9 @@ ActiveAdmin.register AdminUser do
     f.inputs "Nhập thông tin chi tiết" do
       f.input :email,:label => "Email"
       f.input :name,:label => "Họ tên"
-      f.input :old_password,:label => "old Mật khẩu"
+      f.input :c_password,:label =>"Mật khẩu cũ"
       f.input :password,:label => "Mật khẩu"
+
       f.input :password_confirmation,:label => "Nhập lại mật khẩu"
       if current_admin_user.is_admin?
         f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]], :input_html => {
@@ -48,7 +52,7 @@ ActiveAdmin.register AdminUser do
               }
             });
           "}
-        f.input :page,:label => "Trang", :include_blank => false
+        f.input :page ,:label => "Trang", :include_blank => false
       end
     end
     f.actions
@@ -60,7 +64,9 @@ ActiveAdmin.register AdminUser do
       link_to "Thêm người dùng" , "/admin/admin_users/new" 
   end
   action_item :only => :show do
+    if current_admin_user.is_admin !=1
       link_to "Thay đổi thông tin cá nhân",edit_admin_admin_user_path
+    end
   end
 
   show title: "Thông tin chi tiết" do |s|
@@ -96,7 +102,8 @@ ActiveAdmin.register AdminUser do
     def edit
       # use resource.some_method to access information about what you're editing
       @page_title = "Cập nhật thông tin của "+resource.name
-      
+
     end
+
   end
 end

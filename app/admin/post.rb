@@ -25,8 +25,40 @@ config.sort_order = "is_new_desc"
       if current_admin_user.is_admin==1
         super.all
       else
-        super.where(:page_id=>current_admin_user.page_id) end
+
+        super.where(:page_id=>current_admin_user.page_id)
+        # Page.all.each do |p|
+        #   if current_admin_user.page_id==p.id
+        #     @department=Page.where(id: p.id).select("id")
+        #     super.where(:page_id=>@department)
+        #   end
+        # end
       end
+      # if current_admin_user.page_id==1
+      #   @department=Page.where(id: 1).select("id")
+      #   super.where(:page_id=>@department)
+      # elsif current_admin_user.page_id==2
+      #   @department=Page.where(id: 2).select("id")
+      #   super.where(:page_id=>@department)
+      #   #super.where(:category_id=>8)
+      # elsif current_admin_user.page_id==3
+      #   @department=Page.where(id: 3).select("id")
+      #   super.where(:page_id=>@department)
+      #   #super.where(:category_id=>7)
+      # elsif current_admin_user.page_id==4
+      #   @department=Page.where(id: 4).select("id")
+      #   super.where(:page_id=>@department)
+      #   #super.where(:category_id=>6)
+      # elsif current_admin_user.page_id==5
+      #   @department=Page.where(id: 5).select("id")
+      #   super.where(:page_id=>@department)
+      #   #super.where(:category_id=>5)
+      # else
+      #   if current_admin_user.is_admin==1
+      #     super.all
+      #   end
+      # end
+    end
     before_filter { @page_title = "Thêm bài viết" }
     def edit
       # use resource.some_method to access information about what you're editing

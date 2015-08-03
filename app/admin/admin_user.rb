@@ -1,6 +1,6 @@
 ActiveAdmin.register AdminUser do
   menu priority: 7,:if => proc{ current_admin_user.is_admin? },label: "TÀI KHOÁN NGƯỜI DÙNG"
-  permit_params :email, :name, :password, :password_confirmation, :is_admin, :department_id
+  permit_params :email, :name, :password, :password_confirmation, :is_admin, :page_id
     index title: "Danh sách người dùng" do
       selectable_column
       column "Email",:email do |email|
@@ -32,7 +32,6 @@ ActiveAdmin.register AdminUser do
     f.inputs "Nhập thông tin chi tiết" do
       f.input :email,:label => "Email"
       f.input :name,:label => "Họ tên"
-      f.input :old_password,:label => "old Mật khẩu"
       f.input :password,:label => "Mật khẩu"
       f.input :password_confirmation,:label => "Nhập lại mật khẩu"
       if current_admin_user.is_admin?

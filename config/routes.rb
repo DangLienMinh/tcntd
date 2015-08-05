@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   get 'home/contact'
   # post 'admin/login' => 'sessions#create'
   # get 'admin/login' => 'sessions#create'
+
+  # devise_scope :admin_user do
+  #     get 'admin/login5' => 'sessions#new1', :as => :user_login
+  #   end
+  #get 'admin/login5' => 'sessions#new1'
 ActiveAdmin.routes(self)
   #devise_for :admin_users do get '/amdin/login' => 'sessions#create' end
     

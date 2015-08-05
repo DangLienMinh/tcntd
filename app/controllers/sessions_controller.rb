@@ -16,11 +16,14 @@ class SessionsController < Devise::SessionsController
   def create
     if verify_recaptcha
       #flash[:error] = "Captcha has wrong, try a again."
-      #super
     else
       build_resource
-      flash[:error] = "Captcha has wrong, try a again."
+      flash[:error] = "Captcha has wrong, try again." + params[:email]
       respond_with_navigational(resource) { render :new }
     end    
+  end
+  
+  def new1
+    
   end
 end

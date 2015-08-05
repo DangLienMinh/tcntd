@@ -25,6 +25,7 @@ config.sort_order = "is_new_desc"
       if current_admin_user.is_admin==1
         super.all
       else
+
         super.where(:page_id=>current_admin_user.page_id)
         # Page.all.each do |p|
         #   if current_admin_user.page_id==p.id

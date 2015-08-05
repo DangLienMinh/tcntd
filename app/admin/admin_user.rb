@@ -103,10 +103,10 @@ ActiveAdmin.register AdminUser do
       current_id = current_admin_user.id
       # load the AdminUser being updated
       @admin_user = AdminUser.find(params[:id])
-      @current_pass=params[:password_current].to_s
+
       # update the AdminUser with new attributes
       # if successful, this will sign out the AdminUser being updated
-      if @admin_user.valid_password?(@current_pass)
+      if @admin_user.valid_password?('anhtiminh')
         if @admin_user.update_attributes(permitted_params[:admin_user])
           # if the updated AdminUser was the currently logged in AdminUser, sign them back in
           if @admin_user.id == current_id

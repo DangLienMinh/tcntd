@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.integer  "failed_attempts",        default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
+  end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
@@ -169,7 +170,6 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "picture_updated_at"
   end
 
-<<<<<<< HEAD
   create_table "sliders", force: :cascade do |t|
     t.string   "name"
     t.string   "infobig"

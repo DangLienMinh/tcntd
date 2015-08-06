@@ -40,7 +40,8 @@ ActiveAdmin.register AdminUser do
       f.input :name,:label => "Họ tên"
       f.input :phone,:label => "Số Điện Thoại"
       f.input :password_current,:label => "Mật khẩu hiện tại"
-     
+      f.input :password,:label => "Mật khẩu mới"
+      f.input :password_confirmation,:label => "Nhập lại mật khẩu mới"
       if current_admin_user.is_admin?
         f.input :is_admin, :label => "Là quản trị hệ thống", :as => :boolean, :input_html => {
           :onclick => "

@@ -15,9 +15,11 @@ $(function(){
   	$('#admin_user_password_current_input').hide();
     }
     if(window.location.href.toString().indexOf("edit") >=0 && window.location.href.toString().indexOf("admin_users") >=0){
-    var x1= $('#admin_user_id').val();
-    $('.cancel').empty();
-    $('.cancel').append('<a href="/admin/admin_users/'+x1+'">Cancel</a>');
+            var x1= $('#admin_user_id').val();
+            $('.cancel').empty();
+            $('.cancel').append('<a href="/admin/admin_users/'+x1+'">Cancel</a>');
+            $('#admin_user_password_input').remove();
+            $('#admin_user_password_confirmation_input').remove();
     }
     if(window.location.href.toString().indexOf("admin_users") >=0){
     

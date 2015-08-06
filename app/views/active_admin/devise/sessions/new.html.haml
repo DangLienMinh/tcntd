@@ -9,9 +9,10 @@
     %br/
     = f.password_field :password, autocomplete: "off"
   .field
-    = f.label "Xác nhận không phải là robot"
+    
     = @x
     - if defined?($check) && $check==1
+      = f.label "Xác nhận không phải là robot"
       = recaptcha_tags
   - if devise_mapping.rememberable?
     .field

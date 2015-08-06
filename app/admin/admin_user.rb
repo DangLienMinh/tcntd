@@ -128,10 +128,12 @@ action_item :only => :show do
           redirect_to '/admin'
         # display errors
         else
-          render :action => :edit
+            flash[:notice] = 'Mật khẩu bạn vừa nhập không đúng ! Vui lòng thực hiện lại.'
+          redirect_to '/admin'
         end
       else
-        render :action => :edit
+         flash[:notice] ='Mật khẩu bạn vừa nhập không đúng ! Vui lòng thực hiện lại.'
+          redirect_to '/admin'
       end
     end
 

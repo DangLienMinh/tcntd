@@ -52,24 +52,42 @@ module ActiveAdmin
 
     class SessionsController < ::Devise::SessionsController
       #include ::ActiveAdmin::Devise::Controller::InternalHelpers
-      
       include ::ActiveAdmin::Devise::Controller
-      prepend_before_filter :captcha_valid, :only => [ :create]
+      before_filter :captcha_valid, :only => [ :create]
       skip_before_filter :require_no_authentication, :only => [:new]
+      $check=0
+
       def captcha_valid
-        if verify_recaptcha
-           admin_dashboard_path(self.resource)
-          # self.resource = resource_class.new(sign_in_params)
-          # clean_up_passwords(resource)
-          # yield resource if block_given?
-          # respond_with(resource, serialize_options(resource))
+        login_email=params[:admin_user][:email]
+        attemps=AdminUser.where(email: login_email).first.failed_attempts
+       
+        if attemps.to_i>4
+          $check=1
+          if verify_recaptcha
+          else
+            redirect_to new_admin_user_session_path
+          end
         else
-          redirect_to new_admin_user_session_path
-          #build_resource
-          #flash[:error] = "Captcha has wrong, try a again."
-          #respond_with_navigational(resource) { render :new }
+          $check=0
         end
       end
+
+      def new
+        super
+        
+      end
+
+      def create
+        $check=0
+        self.resource = warden.authenticate!(auth_options)
+        set_flash_message(:notice, :signed_in) if is_flashing_format?
+        sign_in(resource_name, resource)
+        yield resource if block_given?
+        respond_with resource, location: after_sign_in_path_for(resource)
+      end
+
+
+
     end
 
     class PasswordsController < ::Devise::PasswordsController

@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.string   "name"
     t.integer  "is_admin",               default: 0
     t.integer  "page_id"
+    t.string   "phone"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree

@@ -248,6 +248,10 @@ config.site_title_image = "logo1.png"
   config.before_filter do
     params.permit!
   end
+  config.register_javascript 'loadadmin.js'
+  config.register_javascript 'fancybox/jquery.fancybox.pack.js'
+  config.register_stylesheet 'fancybox/jquery.fancybox.css'
+  config.register_javascript 'bootstrap.min.js'
+  config.register_javascript 'ckeditor/init.js'\
 
-  config.register_javascript 'ckeditor/init.js'
 end

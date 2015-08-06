@@ -9,7 +9,7 @@ $(function(){
         $('#admin_user_page_id').val(null);
     }else{
         $('#admin_user_page_id').parent().show();
-        $('#admin_user_page_id').val($('#admin_user_page_id option:first').val());
+        //$('#admin_user_page_id').val($('#admin_user_page_id option:first').val());
     }
     if(window.location.href.toString().indexOf("new") >=0 && window.location.href.toString().indexOf("admin_users") >=0){
   	$('#admin_user_password_current_input').hide();

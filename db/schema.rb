@@ -47,10 +47,13 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.string   "name"
     t.integer  "is_admin",               default: 0
     t.integer  "page_id"
-    t.string   "phone"
     t.integer  "failed_attempts",        default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
+<<<<<<< HEAD
+    t.string   "phone"
+=======
+>>>>>>> f2cdcfde0d22fe0a11cba4157a06033ac4bc8fb6
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -170,6 +173,8 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "picture_updated_at"
   end
 
+<<<<<<< HEAD
+=======
   create_table "sliders", force: :cascade do |t|
     t.string   "name"
     t.string   "infobig"
@@ -198,6 +203,7 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "pic5_updated_at"
   end
 
+>>>>>>> f2cdcfde0d22fe0a11cba4157a06033ac4bc8fb6
   create_table "videohds", force: :cascade do |t|
     t.string   "caption"
     t.string   "link"

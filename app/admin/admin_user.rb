@@ -1,17 +1,18 @@
 ActiveAdmin.register AdminUser do
+  skip_before_filter :verify_authenticity_token
   menu priority: 7,:if => proc{ current_admin_user.is_admin? },label: "TÀI KHOÁN NGƯỜI DÙNG"
   action_item only:[:show] do
     link_to "Message Customers", new_admin_share_blast_path(share_blast:{share_id:share})
   end
-  permit_params :email, :name, :password, :password_confirmation, :is_admin, :page_id
+  permit_params :email, :name, :password, :password_confirmation,:phone, :is_admin, :page_id
     index title: "Danh sách người dùng" do
       selectable_column
       column "Email",:email do |email|
         link_to email.email,[:admin,email]
       end
       column "Họ tên",:name
+      column "SĐT",:phone
       column "Ngày ĐN mới nhất",:current_sign_in_at
-      
       column "Quản trị" do |m|
       m.is_admin? ? "Quản trị" : "Người dùng"
     end
@@ -32,25 +33,24 @@ ActiveAdmin.register AdminUser do
   filter :created_at
 
   form do |f|
+
     f.inputs "Nhập thông tin chi tiết" do
+      f.input :id,input_html: { :style=> 'display:none;' },:label=>false
       f.input :email,:label => "Email"
       f.input :name,:label => "Họ tên"
-
+      f.input :phone,:label => "Số Điện Thoại"
       f.input :password_current,:label => "Mật khẩu hiện tại"
-      f.input :password,:label => "Mật khẩu mới"
-      f.input :password_confirmation,:label => "Nhập lại mật khẩu mới"
+     
       if current_admin_user.is_admin?
-        f.input :is_admin, :label => "Là quản trị hệ thống", :as => :radio, :collection =>[['Không là admin', 0],['Là admin', 1]], :input_html => {
-          :onchange => "
-            $('.choices-group').change(function(){
-              if($('.choice input:checked').val()==1){
+        f.input :is_admin, :label => "Là quản trị hệ thống", :as => :boolean, :input_html => {
+          :onclick => "
+              if(document.getElementById('admin_user_is_admin').checked==true){
                $('#admin_user_page_id').parent().hide();
                $('#admin_user_page_id').val(null);
               }else{
-                $('#admin_user_page_id').parent().show(); 
+                $('#admin_user_page_id').parent().show();
                 $('#admin_user_page_id').val($('#admin_user_page_id option:first').val());
               }
-            });
           "}
         f.input :page ,:label => "Trang", :include_blank => false
       end
@@ -64,11 +64,14 @@ ActiveAdmin.register AdminUser do
       link_to "Thêm người dùng" , "/admin/admin_users/new" 
   end
   action_item :only => :show do
-    if current_admin_user.is_admin !=1
-      link_to "Thay đổi thông tin cá nhân",edit_admin_admin_user_path
-    end
-  end
+      ("<a class='fancybox' href='#inline1' title=''>Thay Đổi Mật Khẩu</a>").html_safe
 
+  end
+action_item :only => :show do
+
+      link_to "Thay đổi thông tin cá nhân",edit_admin_admin_user_path
+      
+  end
   show title: "Thông tin chi tiết" do |s|
     panel "Thông tin chi tiết" do
       attributes_table_for admin_user do
@@ -80,6 +83,9 @@ ActiveAdmin.register AdminUser do
         end
         row "Họ tên" do
           s.name
+        end
+        row "Số điện thoại" do
+          s.phone
         end
         row "Lần đăng nhập gần nhất" do
           s.current_sign_in_at
@@ -98,7 +104,6 @@ ActiveAdmin.register AdminUser do
    end
 
   controller do
-    before_filter { @page_title = "Thêm người dùng" }
     def edit
       # use resource.some_method to access information about what you're editing
       @page_title = "Cập nhật thông tin của "+resource.name

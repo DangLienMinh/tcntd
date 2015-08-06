@@ -31,3 +31,30 @@ en:
   hello: "Hello world"
   errors:
     format: "%{message}"
+  formtastic:
+    :create: 'Tạo mới %{model}'
+    :update: 'Cập nhật %{model}'
+    :submit: 'Gửi %{model}'
+  activerecord:
+   models:
+    admin_user:
+     one: "Người dùng"
+     other: "Người dùng"
+    page:
+     one: "Trang"
+     other: "Trang"
+    category:
+     one: "Loại bài viết"
+     other: "Loại bài viết"
+    post:
+     one: "Bài viết"
+     other: "Bài viết"
+    slidercontent:
+     one: "Slider"
+     other: "Slider"
+    videohd:
+     one: "Video giới thiệu"
+     other: "Video giới thiệu"
+    contact:
+     one: "Liên hệ"
+     other: "Liên hệ"

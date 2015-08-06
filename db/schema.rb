@@ -47,7 +47,14 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.integer  "failed_attempts",        default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
+<<<<<<< HEAD
     t.string   "phone"
+=======
+<<<<<<< HEAD
+    t.string   "phone"
+=======
+>>>>>>> f2cdcfde0d22fe0a11cba4157a06033ac4bc8fb6
+>>>>>>> e7ddc68b0f45bd4ad86f30a700690d3be4a4e9c4
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -167,6 +174,40 @@ ActiveRecord::Schema.define(version: 201510611111111063138) do
     t.datetime "picture_updated_at"
   end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  create_table "sliders", force: :cascade do |t|
+    t.string   "name"
+    t.string   "infobig"
+    t.string   "infosmall"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "pic1_file_name"
+    t.string   "pic1_content_type"
+    t.integer  "pic1_file_size"
+    t.datetime "pic1_updated_at"
+    t.string   "pic2_file_name"
+    t.string   "pic2_content_type"
+    t.integer  "pic2_file_size"
+    t.datetime "pic2_updated_at"
+    t.string   "pic3_file_name"
+    t.string   "pic3_content_type"
+    t.integer  "pic3_file_size"
+    t.datetime "pic3_updated_at"
+    t.string   "pic4_file_name"
+    t.string   "pic4_content_type"
+    t.integer  "pic4_file_size"
+    t.datetime "pic4_updated_at"
+    t.string   "pic5_file_name"
+    t.string   "pic5_content_type"
+    t.integer  "pic5_file_size"
+    t.datetime "pic5_updated_at"
+  end
+
+>>>>>>> f2cdcfde0d22fe0a11cba4157a06033ac4bc8fb6
+>>>>>>> e7ddc68b0f45bd4ad86f30a700690d3be4a4e9c4
   create_table "videohds", force: :cascade do |t|
     t.string   "caption"
     t.string   "link"

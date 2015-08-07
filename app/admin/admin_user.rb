@@ -138,11 +138,11 @@ action_item :only => :show do
           if @admin_user.id == current_id
             sign_in(AdminUser.find(current_id), :bypass => true)
           end
-          flash[:notice] = I18n.t('devise.passwords.updated_not_active')
+          flash[:notice] = 'Thay đổi thông tin tài khoản thành công !'
           redirect_to '/admin'
         # display errors
         else
-            flash[:notice] = 'Mật khẩu bạn vừa nhập không đúng ! Vui lòng thực hiện lại.'
+            flash[:notice] = 'Thông tin bạn vừa nhập chưa đúng ! Vui lòng thực hiện lại.'
           redirect_to '/admin'
         end
       else

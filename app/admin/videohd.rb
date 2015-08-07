@@ -1,6 +1,8 @@
 # encoding: utf-8
 ActiveAdmin.register Videohd do
   menu :if => proc{ current_admin_user.is_admin? }, label: "VIDEO HOẠT ĐỘNG"
+  filter :created_at
+  filter :caption
   controller do
     def permitted_params
       params.permit videohd: [:caption,:link,:ordernum]

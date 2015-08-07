@@ -36,6 +36,50 @@ en:
     :update: 'Cập nhật %{model}'
     :submit: 'Gửi %{model}'
   activerecord:
+   attributes:
+    admin_user:
+     created_at: "Ngày tạo"
+     sign_in_count: "Số lần ĐN"
+     current_sign_in_at: "Ngày ĐN mới nhất"
+     page: "Phòng ban"
+     name: "Họ tên"
+    post:
+     created_at: "Ngày tạo"
+     category: "Loại bài viết"
+     page: "Phòng ban"
+     admin_user: "Tác gỉa"
+     name: "Tiêu đề"
+     content: "Nội dung"
+     updated_at: "Ngày cập nhật"
+    category:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+    page:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+     menu: "Phòng ban"
+    menu:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+     parent: "Menu cha"
+    slidercontent:
+     created_at: "Ngày tạo"
+     updated_at: "Ngày cập nhật"
+    contact:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     phone: "Điện thoại"
+     subject: "Tiêu đề"
+    popup:
+      created_at: "Ngày tạo"
+    videohd:
+      created_at: "Ngày tạo"
+      caption: "Lời tựa"
+
+
    models:
     admin_user:
      one: "Người dùng"
@@ -58,3 +102,18 @@ en:
     contact:
      one: "Liên hệ"
      other: "Liên hệ"
+  
+
+  active_admin:
+    any: "Tất cả"
+    filters:
+      buttons:
+        filter: "Lọc thuộc tính"
+        clear: "Hủy"
+      predicates:
+        contains: "Chứa"
+        equals: "Giống với"
+        starts_with: "Bắt đầu bằng"
+        ends_with: "Kết thúc bằng"
+        greater_than: "Lớn hơn"
+        less_than: "Nhỏ hơn"

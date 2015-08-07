@@ -14,6 +14,13 @@ config.sort_order = "is_new_desc"
 #   permitted << :other if resource.something?
 #   permitted
 # end
+  filter :name
+  filter :content
+  filter :created_at
+  filter :updated_at
+  filter :category
+  filter :admin_user
+  filter :page
 
   controller do
     skip_before_filter :getActiveProjects

@@ -12,6 +12,10 @@ menu :if => proc{ current_admin_user.is_admin? }, label: "LIÊN HỆ"
 #   permitted << :other if resource.something?
 #   permitted
 # end
-
+  filter :email
+  filter :name
+  filter :phone
+  filter :subject
+  filter :created_at
 
 end

@@ -2,6 +2,7 @@
 ActiveAdmin.register Confighome do
 
   menu :if => proc{ current_admin_user.is_admin? }, label: "CẤU HÌNH TRANG CHỦ"
+  filter :none
   controller do
     def permitted_params
       params.permit confighome: [:numslider,:numpostbox,:muctieu,:cacnghedt,:diachi,:phone,:email,:linkfb,:linktw,:copyright,:trangthai]

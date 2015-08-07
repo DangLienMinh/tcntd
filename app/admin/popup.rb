@@ -2,6 +2,7 @@
 ActiveAdmin.register Popup do
 
   menu :if => proc{ current_admin_user.is_admin? }, label: "QUẢN LÝ POPUP"
+  filter :created_at
   controller do
     def permitted_params
       params.permit popup: [:caption,:content,:trangthai]

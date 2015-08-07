@@ -18,4 +18,6 @@ menu :if => proc{ current_admin_user.is_admin? }, label: "LIÊN HỆ"
   filter :subject
   filter :created_at
 
+
+config.clear_action_items!
 end

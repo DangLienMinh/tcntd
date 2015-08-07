@@ -2,7 +2,12 @@
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
-
+/if( isMobile.iOS() ) {
+       /window.location = "https://www.apple.com/";
+      /};
+       /if( isMobile.Android() ) {
+       /window.location = "http://m.google.com";
+      /};
 Site example:
  http://tcntd.herokuapp.com/
 

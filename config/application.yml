@@ -1,0 +1,14 @@
+development: &defaults
+  site:
+    name: 'tcntd'
+    sender_email: 
+
+  API:
+    S3_SERECT_KEY:
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  SECRET_KEY_BASE: <%= ENV["SECRET_KEY_BASE"] %>

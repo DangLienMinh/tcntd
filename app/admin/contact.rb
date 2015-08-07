@@ -13,5 +13,5 @@ menu :if => proc{ current_admin_user.is_admin? }, label: "LIÊN HỆ"
 #   permitted
 # end
 
-
+config.clear_action_items!
 end

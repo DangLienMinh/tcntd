@@ -6,23 +6,25 @@ ActiveAdmin.register AdminUser do
   end
   permit_params :email, :name, :password, :password_confirmation,:phone, :is_admin, :page_id
     index title: "Danh sách người dùng" do
-      selectable_column
-      column "Email",:email do |email|
-        link_to email.email,[:admin,email]
-      end
-      column "Họ tên",:name
-      column "SĐT",:phone
-      column "Ngày ĐN mới nhất",:current_sign_in_at
-      column "Quản trị" do |m|
-      m.is_admin? ? "Quản trị" : "Người dùng"
-    end
-      column "Phòng ban",:page
-      column "" do |resource|
-        links = ''.html_safe
-        links += link_to 'Hiển thị', resource_path(resource), :class => "member_link view_link"
-        links += link_to 'Sửa', edit_resource_path(resource), :class => "member_link edit_link"
-        links += link_to 'Xóa', resource_path(resource), :method => :delete, :confirm => I18n.t('active_admin.delete_confirmation'), :class => "member_link delete_link"
-        links
+      if current_admin_user.is_admin?
+        selectable_column
+        column "Email",:email do |email|
+          link_to email.email,[:admin,email]
+        end
+        column "Họ tên",:name
+        column "SĐT",:phone
+        column "Ngày ĐN mới nhất",:current_sign_in_at
+        column "Quản trị" do |m|
+         m.is_admin? ? "Quản trị" : "Người dùng"
+        end
+        column "Phòng ban",:page
+        column "" do |resource|
+          links = ''.html_safe
+          links += link_to 'Hiển thị', resource_path(resource), :class => "member_link view_link"
+          links += link_to 'Sửa', edit_resource_path(resource), :class => "member_link edit_link"
+          links += link_to 'Xóa', resource_path(resource), :method => :delete, :confirm => I18n.t('active_admin.delete_confirmation'), :class => "member_link delete_link"
+          links
+        end
       end
       #actions
     end
@@ -64,7 +66,9 @@ ActiveAdmin.register AdminUser do
   config.clear_action_items!
 
   action_item :only => :index do
-      link_to "Thêm người dùng" , "/admin/admin_users/new" 
+    if current_admin_user.is_admin?
+      link_to "Thêm người dùng" , "/admin/admin_users/new"
+    end 
   end
   action_item :only => :show do
       ("<a class='fancybox' href='#inline1' title=''>Thay Đổi Mật Khẩu</a>").html_safe
@@ -110,6 +114,14 @@ action_item :only => :show do
     def edit
       # use resource.some_method to access information about what you're editing
       @page_title = "Cập nhật thông tin của "+resource.name
+    end
+
+    def new
+      if current_admin_user.is_admin?
+        super
+      else
+        redirect_to admin_admin_user_path(current_admin_user.id)
+      end
     end
 
     def update

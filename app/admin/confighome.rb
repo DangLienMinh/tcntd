@@ -21,7 +21,13 @@ ActiveAdmin.register Confighome do
     column :numpostbox,:label=>"Số post hiển thị"
 
     column :trangthai,:label=>"Trạng thái"
-    actions
+    column "" do |resource|
+        links = ''.html_safe
+        links += link_to 'Hiển thị', resource_path(resource), :class => "member_link view_link"
+        links += link_to 'Sửa', edit_resource_path(resource), :class => "member_link edit_link"
+        #links += link_to 'Xóa', resource_path(resource), :method => :delete, :confirm => I18n.t('active_admin.delete_confirmation'), :class => "member_link delete_link"
+        links
+      end
   end
 
 
@@ -41,9 +47,6 @@ ActiveAdmin.register Confighome do
       f.input :linktw, :label => "Liên kết Twiter"
       f.label :trangthai,"Trạng Thái :"
       f.check_box :trangthai
-
-
-
     end
     f.actions
   end

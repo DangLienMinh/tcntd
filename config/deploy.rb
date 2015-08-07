@@ -3,7 +3,7 @@ lock '3.1.0'
 
 set :application, 'tcntd'
 set :repo_url, 'git@heroku.com:tcntd.git'
-set :rvm_ruby_version, 'ruby-2.1.0@jinji-gemset'
+set :rvm_ruby_version, '2.1.0'
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 

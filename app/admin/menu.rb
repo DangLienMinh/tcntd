@@ -12,6 +12,10 @@ menu priority: 2,:if => proc{ current_admin_user.is_admin? },label: "MENU"
 #   permitted << :other if resource.something?
 #   permitted
 # end
+  filter :name
+  filter :created_at
+  filter :updated_at
+  filter :parent
 
 	controller do
 		def permitted_params

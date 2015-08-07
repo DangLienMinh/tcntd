@@ -15,6 +15,9 @@ ActiveAdmin.register Slidercontent do
 #   permitted << :other if resource.something?
 #   permitted
 # end
+filter :name
+  filter :created_at
+  filter :updated_at
   controller do
     def permitted_params
       params.permit slidercontent: [:link,:topcaption, :botcaption, :ordernum, :picture]

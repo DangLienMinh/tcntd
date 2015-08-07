@@ -13,6 +13,11 @@ menu priority: 2,label: "TRANG"
 #   permitted << :other if resource.something?
 #   permitted
 # end
+  filter :name
+  filter :created_at
+  filter :updated_at
+  filter :menu
+
 controller do
     def permitted_params
       params.permit page: [:name,:description,:slogan,:menu_id,:url]

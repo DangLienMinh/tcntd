@@ -12,6 +12,12 @@ menu priority: 4,:if => proc{ current_admin_user.is_admin? },label: "LOẠI BÀI
 #   permitted << :other if resource.something?
 #   permitted
 # end
+
+  filter :name
+  filter :created_at
+  filter :updated_at
+
+
 controller do
     def permitted_params
       params.permit category: [:name]

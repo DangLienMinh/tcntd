@@ -52,7 +52,7 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'capistrano', '~> 3.1.0'
-
+gem 'capistrano-rvm'
 # rails specific capistrano funcitons
 gem 'capistrano-rails', '~> 1.1.0'
 

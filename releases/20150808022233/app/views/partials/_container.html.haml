@@ -1,0 +1,50 @@
+.container
+  .row
+    .col-md-3
+      .grey-box-icon.border-box
+        .box-vnits-tuyensinh
+          %span.box-a Tuyển Sinh
+        %ul.list-unstyled.list-spaces.text-left1
+          - all_posts_tuyen_sinh.each do |post|
+            %li{:style => "position:relative;"}
+              = link_to truncate(post.name,:length=>75),post_path(post)
+              - if  post.is_new?
+                %span.new_class
+        %p
+          %em= link_to "Xem thêm ..." ,posts_showalltuyensinh_path
+    .col-md-3
+      .grey-box-icon
+        .box-vnits-thongbao
+          %span.box-a Thông Báo
+        %ul.list-unstyled.list-spaces.text-left1
+          - all_posts_thong_bao.each do |post|
+            %li
+              = link_to truncate(post.name,:length=>75),post_path(post)
+              - if  post.is_new?
+                %span.new_class
+        %p
+          %em= link_to "Xem thêm ..." ,posts_showallthongbao_path
+    .col-md-3
+      .grey-box-icon
+        .box-vnits-tintuc
+          %span.box-a Tin tức
+        %ul.list-unstyled.list-spaces.text-left1
+          - all_posts_tin_tuc.each do |post|
+            %li
+              = link_to truncate(post.name,:length=>75),post_path(post)
+              - if  post.is_new?
+                %span.new_class
+        %p
+          %em= link_to "Xem thêm ..." ,posts_showalltintuc_path
+    .col-md-3
+      .grey-box-icon
+        .box-vnits-tuyendung
+          %span.box-a Tuyển Dụng
+        %ul.list-unstyled.list-spaces.text-left1
+          - all_posts_tuyen_dung.each do |post|
+            %li
+              = link_to truncate(post.name,:length=>75),post_path(post)
+              - if  post.is_new?
+                %span.new_class
+        %p
+          %em= link_to "Xem thêm ..." ,posts_showalltuyendung_path

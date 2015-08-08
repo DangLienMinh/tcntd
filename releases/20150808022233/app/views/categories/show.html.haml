@@ -1,0 +1,18 @@
+%header#head.secondary
+  .container
+    %h1= @category.name
+%section.container
+  .row{:style => "margin-top: 35px;"}
+    %aside.col-sm-12.sidebar.sidebar-right.box-shadow.box-radius
+      .panel
+        %ul.list-unstyled.list-spaces
+          - @posttd.each do |tt|
+            %li= link_to truncate(tt.name,:length=>75),posts_show_path(:id=>tt.id)
+            = image_tag(tt.pic.url) ,:class => "pic"
+            = tt.summary
+            %div{:style => "text-align: right;"}
+              = link_to "Chi Tiết ...",posts_show_path(:id=>tt.id)
+            %div{:style => "clear: both;"}
+            %h1{:style => "border-bottom: 1px dotted #ccc"}
+          .flickr_pagination
+            = will_paginate @posttd

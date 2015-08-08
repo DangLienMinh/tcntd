@@ -1,0 +1,20 @@
+%section.container
+  .row
+    .col-md-t.box-.box-radius1.box-shadow
+      .title-box.clearfix
+        %h2.title-box_primary{:style => "margin-top: 0px;"} MỤC TIÊU PHÁT TRIỂN
+      %div{:style => "padding: 9px;"}
+        - if cauhinh_trangchu.each
+          - cauhinh_trangchu.each do |c|
+            = raw(c.muctieu)
+        
+    .col-md-4.box-.box-radius1.box-shadow
+      .title-box.clearfix
+        %h2.title-box_primary{:style => "margin-top: 0px;"} Các nghề đào tạo
+      %div{:style => "padding: 9px;"}
+        .list.styled.custom-list
+          %ul
+            - if cauhinh_trangchu.each
+              - cauhinh_trangchu.each do |c|
+                = raw(c.cacnghedt)
+            

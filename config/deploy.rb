@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'tcntd'
-set :repo_url, 'git@heroku.com:tcntd.git'
+set :repo_url, 'git@github.com:DangLienMinh/tcntd.git'
 set :rvm_ruby_version, '2.1.0'
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -18,7 +18,7 @@ set :deploy_via, :copy
 
 set :scm, :git
 set :rails_env, 'production'
-set :branch, 'production'
+#set :branch, 'master'
 # Default value for :format is :pretty
 # set :format, :pretty
 

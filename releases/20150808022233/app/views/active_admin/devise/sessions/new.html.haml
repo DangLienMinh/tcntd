@@ -1,0 +1,23 @@
+%h2 ĐĂNG NHẬP HỆ QUẢN TRỊ NỘI DUNG TRƯỜNG TRUNG CẤP NGHỀ THỦ ĐỨC
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true
+  .field
+    = f.label "Mật khẩu"
+    %br/
+    = f.password_field :password, autocomplete: "off"
+  .field
+    
+    = @x
+    - if defined?($check) && $check==1
+      = f.label "Xác nhận không phải là robot"
+      = recaptcha_tags
+  - if devise_mapping.rememberable?
+    .field
+      = f.check_box :remember_me
+      = f.label "Ghi nhớ tôi"
+  .actions
+    = f.submit "Đăng nhập"
+= render "devise/shared/links"

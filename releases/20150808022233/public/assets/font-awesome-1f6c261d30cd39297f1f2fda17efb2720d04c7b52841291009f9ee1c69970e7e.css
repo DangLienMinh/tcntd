@@ -1,0 +1,2048 @@
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/fontawesome-webfont-39e237c07403e62f00bd6ddf0b59d3349c7bd3869250aaadc389419db6aa40ef.eot");
+  src: url("/assets/fontawesome-webfont-39e237c07403e62f00bd6ddf0b59d3349c7bd3869250aaadc389419db6aa40ef.eot?#iefix") format("eot"), url("/assets/fontawesome-webfont-0fd28fece9ebd606b8b071460ebd3fc2ed7bc7a66ef91c8834f11dfacab4a849.woff") format("woff"), url("/assets/fontawesome-webfont-6b49348ad53886d09ce4c32fa146e899c820de3f85a8dd3704a0624eb3bf7fa1.ttf") format("truetype"), url("/assets/fontawesome-webfont-7b8b744559f1acc526ea9b5f340f6fbf151c1f07114cddff85983ef77c754be4.svg#FontAwesome") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-lg {
+  font-size: 1.3333333333333333em;
+  line-height: .75em;
+  vertical-align: -15%;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  top: .14285714285714285em;
+  text-align: center;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-li.fa-lg {
+  left: -1.8571428571428572em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid .08em #eee;
+  border-radius: .1em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.pull-right {
+  float: right;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.pull-left {
+  float: left;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa.pull-left {
+  margin-right: .3em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0,mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2,mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-inverse {
+  color: #fff;
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-glass:before {
+  content: "\f000";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-music:before {
+  content: "\f001";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-search:before {
+  content: "\f002";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-envelope-o:before {
+  content: "\f003";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-heart:before {
+  content: "\f004";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-star:before {
+  content: "\f005";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-star-o:before {
+  content: "\f006";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-user:before {
+  content: "\f007";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-film:before {
+  content: "\f008";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-th-large:before {
+  content: "\f009";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-th:before {
+  content: "\f00a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-th-list:before {
+  content: "\f00b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-check:before {
+  content: "\f00c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-times:before {
+  content: "\f00d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-search-plus:before {
+  content: "\f00e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-search-minus:before {
+  content: "\f010";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-power-off:before {
+  content: "\f011";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-signal:before {
+  content: "\f012";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gear:before, .fa-cog:before {
+  content: "\f013";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-trash-o:before {
+  content: "\f014";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-home:before {
+  content: "\f015";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-file-o:before {
+  content: "\f016";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-clock-o:before {
+  content: "\f017";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-road:before {
+  content: "\f018";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-download:before {
+  content: "\f019";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-o-down:before {
+  content: "\f01a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-o-up:before {
+  content: "\f01b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-inbox:before {
+  content: "\f01c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-play-circle-o:before {
+  content: "\f01d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rotate-right:before, .fa-repeat:before {
+  content: "\f01e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-refresh:before {
+  content: "\f021";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-list-alt:before {
+  content: "\f022";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-lock:before {
+  content: "\f023";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flag:before {
+  content: "\f024";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-headphones:before {
+  content: "\f025";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-volume-off:before {
+  content: "\f026";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-volume-down:before {
+  content: "\f027";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-volume-up:before {
+  content: "\f028";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-qrcode:before {
+  content: "\f029";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-barcode:before {
+  content: "\f02a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tag:before {
+  content: "\f02b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tags:before {
+  content: "\f02c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-book:before {
+  content: "\f02d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-print:before {
+  content: "\f02f";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-camera:before {
+  content: "\f030";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-font:before {
+  content: "\f031";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bold:before {
+  content: "\f032";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-italic:before {
+  content: "\f033";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-text-height:before {
+  content: "\f034";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-text-width:before {
+  content: "\f035";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-align-left:before {
+  content: "\f036";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-align-center:before {
+  content: "\f037";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-align-right:before {
+  content: "\f038";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-align-justify:before {
+  content: "\f039";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-list:before {
+  content: "\f03a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dedent:before, .fa-outdent:before {
+  content: "\f03b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-indent:before {
+  content: "\f03c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-video-camera:before {
+  content: "\f03d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-picture-o:before {
+  content: "\f03e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pencil:before {
+  content: "\f040";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-map-marker:before {
+  content: "\f041";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-adjust:before {
+  content: "\f042";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tint:before {
+  content: "\f043";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-edit:before, .fa-pencil-square-o:before {
+  content: "\f044";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-share-square-o:before {
+  content: "\f045";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-check-square-o:before {
+  content: "\f046";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrows:before {
+  content: "\f047";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-step-backward:before {
+  content: "\f048";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-backward:before {
+  content: "\f04a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-play:before {
+  content: "\f04b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pause:before {
+  content: "\f04c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stop:before {
+  content: "\f04d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-forward:before {
+  content: "\f04e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-step-forward:before {
+  content: "\f051";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-eject:before {
+  content: "\f052";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-plus-circle:before {
+  content: "\f055";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-minus-circle:before {
+  content: "\f056";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-times-circle:before {
+  content: "\f057";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-question-circle:before {
+  content: "\f059";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-info-circle:before {
+  content: "\f05a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-crosshairs:before {
+  content: "\f05b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-times-circle-o:before {
+  content: "\f05c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-check-circle-o:before {
+  content: "\f05d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ban:before {
+  content: "\f05e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-mail-forward:before, .fa-share:before {
+  content: "\f064";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-expand:before {
+  content: "\f065";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-compress:before {
+  content: "\f066";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-plus:before {
+  content: "\f067";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-minus:before {
+  content: "\f068";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-asterisk:before {
+  content: "\f069";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gift:before {
+  content: "\f06b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-leaf:before {
+  content: "\f06c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fire:before {
+  content: "\f06d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-eye:before {
+  content: "\f06e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-eye-slash:before {
+  content: "\f070";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-warning:before, .fa-exclamation-triangle:before {
+  content: "\f071";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-plane:before {
+  content: "\f072";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-calendar:before {
+  content: "\f073";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-random:before {
+  content: "\f074";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-comment:before {
+  content: "\f075";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-magnet:before {
+  content: "\f076";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-retweet:before {
+  content: "\f079";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-folder:before {
+  content: "\f07b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrows-v:before {
+  content: "\f07d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrows-h:before {
+  content: "\f07e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bar-chart-o:before {
+  content: "\f080";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-key:before {
+  content: "\f084";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gears:before, .fa-cogs:before {
+  content: "\f085";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-comments:before {
+  content: "\f086";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-thumbs-o-up:before {
+  content: "\f087";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-thumbs-o-down:before {
+  content: "\f088";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-star-half:before {
+  content: "\f089";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-heart-o:before {
+  content: "\f08a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sign-out:before {
+  content: "\f08b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-linkedin-square:before {
+  content: "\f08c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-thumb-tack:before {
+  content: "\f08d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-external-link:before {
+  content: "\f08e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sign-in:before {
+  content: "\f090";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-trophy:before {
+  content: "\f091";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-github-square:before {
+  content: "\f092";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-upload:before {
+  content: "\f093";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-lemon-o:before {
+  content: "\f094";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-phone:before {
+  content: "\f095";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-square-o:before {
+  content: "\f096";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bookmark-o:before {
+  content: "\f097";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-phone-square:before {
+  content: "\f098";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-twitter:before {
+  content: "\f099";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-github:before {
+  content: "\f09b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-unlock:before {
+  content: "\f09c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-credit-card:before {
+  content: "\f09d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rss:before {
+  content: "\f09e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hdd-o:before {
+  content: "\f0a0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bullhorn:before {
+  content: "\f0a1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hand-o-right:before {
+  content: "\f0a4";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hand-o-left:before {
+  content: "\f0a5";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hand-o-up:before {
+  content: "\f0a6";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hand-o-down:before {
+  content: "\f0a7";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-globe:before {
+  content: "\f0ac";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-filter:before {
+  content: "\f0b0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-group:before, .fa-users:before {
+  content: "\f0c0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chain:before, .fa-link:before {
+  content: "\f0c1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flask:before {
+  content: "\f0c3";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cut:before, .fa-scissors:before {
+  content: "\f0c4";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-copy:before, .fa-files-o:before {
+  content: "\f0c5";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-save:before, .fa-floppy-o:before {
+  content: "\f0c7";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-square:before {
+  content: "\f0c8";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-underline:before {
+  content: "\f0cd";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-table:before {
+  content: "\f0ce";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-magic:before {
+  content: "\f0d0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-truck:before {
+  content: "\f0d1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-money:before {
+  content: "\f0d6";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-columns:before {
+  content: "\f0db";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-unsorted:before, .fa-sort:before {
+  content: "\f0dc";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-down:before, .fa-sort-asc:before {
+  content: "\f0dd";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-up:before, .fa-sort-desc:before {
+  content: "\f0de";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rotate-left:before, .fa-undo:before {
+  content: "\f0e2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-legal:before, .fa-gavel:before {
+  content: "\f0e3";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dashboard:before, .fa-tachometer:before {
+  content: "\f0e4";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-comment-o:before {
+  content: "\f0e5";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-comments-o:before {
+  content: "\f0e6";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flash:before, .fa-bolt:before {
+  content: "\f0e7";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sitemap:before {
+  content: "\f0e8";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-umbrella:before {
+  content: "\f0e9";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-paste:before, .fa-clipboard:before {
+  content: "\f0ea";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-exchange:before {
+  content: "\f0ec";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cloud-download:before {
+  content: "\f0ed";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cloud-upload:before {
+  content: "\f0ee";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-user-md:before {
+  content: "\f0f0";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bell-o:before {
+  content: "\f0a2";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-coffee:before {
+  content: "\f0f4";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cutlery:before {
+  content: "\f0f5";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-file-text-o:before {
+  content: "\f0f6";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-building-o:before {
+  content: "\f0f7";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-hospital-o:before {
+  content: "\f0f8";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ambulance:before {
+  content: "\f0f9";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-medkit:before {
+  content: "\f0fa";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fighter-jet:before {
+  content: "\f0fb";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-beer:before {
+  content: "\f0fc";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-h-square:before {
+  content: "\f0fd";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-plus-square:before {
+  content: "\f0fe";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-double-left:before {
+  content: "\f100";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-double-right:before {
+  content: "\f101";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-double-up:before {
+  content: "\f102";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-double-down:before {
+  content: "\f103";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-left:before {
+  content: "\f104";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-up:before {
+  content: "\f106";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-angle-down:before {
+  content: "\f107";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-desktop:before {
+  content: "\f108";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-laptop:before {
+  content: "\f109";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tablet:before {
+  content: "\f10a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-mobile-phone:before, .fa-mobile:before {
+  content: "\f10b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-circle-o:before {
+  content: "\f10c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-quote-left:before {
+  content: "\f10d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-quote-right:before {
+  content: "\f10e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-spinner:before {
+  content: "\f110";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-circle:before {
+  content: "\f111";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-mail-reply:before, .fa-reply:before {
+  content: "\f112";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-folder-o:before {
+  content: "\f114";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-folder-open-o:before {
+  content: "\f115";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-smile-o:before {
+  content: "\f118";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-frown-o:before {
+  content: "\f119";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-meh-o:before {
+  content: "\f11a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gamepad:before {
+  content: "\f11b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-keyboard-o:before {
+  content: "\f11c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flag-o:before {
+  content: "\f11d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flag-checkered:before {
+  content: "\f11e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-terminal:before {
+  content: "\f120";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-code:before {
+  content: "\f121";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-reply-all:before {
+  content: "\f122";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-mail-reply-all:before {
+  content: "\f122";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before {
+  content: "\f123";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-location-arrow:before {
+  content: "\f124";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-crop:before {
+  content: "\f125";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-code-fork:before {
+  content: "\f126";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-unlink:before, .fa-chain-broken:before {
+  content: "\f127";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-question:before {
+  content: "\f128";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-info:before {
+  content: "\f129";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-exclamation:before {
+  content: "\f12a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-superscript:before {
+  content: "\f12b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-subscript:before {
+  content: "\f12c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-eraser:before {
+  content: "\f12d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-puzzle-piece:before {
+  content: "\f12e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-microphone:before {
+  content: "\f130";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-microphone-slash:before {
+  content: "\f131";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-shield:before {
+  content: "\f132";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-calendar-o:before {
+  content: "\f133";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-fire-extinguisher:before {
+  content: "\f134";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rocket:before {
+  content: "\f135";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-maxcdn:before {
+  content: "\f136";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-circle-left:before {
+  content: "\f137";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-circle-right:before {
+  content: "\f138";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-circle-up:before {
+  content: "\f139";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-chevron-circle-down:before {
+  content: "\f13a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-html5:before {
+  content: "\f13b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-css3:before {
+  content: "\f13c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-anchor:before {
+  content: "\f13d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-unlock-alt:before {
+  content: "\f13e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bullseye:before {
+  content: "\f140";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ellipsis-h:before {
+  content: "\f141";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ellipsis-v:before {
+  content: "\f142";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rss-square:before {
+  content: "\f143";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-play-circle:before {
+  content: "\f144";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ticket:before {
+  content: "\f145";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-minus-square:before {
+  content: "\f146";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-minus-square-o:before {
+  content: "\f147";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-level-up:before {
+  content: "\f148";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-level-down:before {
+  content: "\f149";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-check-square:before {
+  content: "\f14a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pencil-square:before {
+  content: "\f14b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-external-link-square:before {
+  content: "\f14c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-share-square:before {
+  content: "\f14d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-compass:before {
+  content: "\f14e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-toggle-down:before, .fa-caret-square-o-down:before {
+  content: "\f150";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-toggle-up:before, .fa-caret-square-o-up:before {
+  content: "\f151";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-toggle-right:before, .fa-caret-square-o-right:before {
+  content: "\f152";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-euro:before, .fa-eur:before {
+  content: "\f153";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gbp:before {
+  content: "\f154";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dollar:before, .fa-usd:before {
+  content: "\f155";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-rupee:before, .fa-inr:before {
+  content: "\f156";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-cny:before, .fa-rmb:before, .fa-yen:before, .fa-jpy:before {
+  content: "\f157";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-ruble:before, .fa-rouble:before, .fa-rub:before {
+  content: "\f158";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-won:before, .fa-krw:before {
+  content: "\f159";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bitcoin:before, .fa-btc:before {
+  content: "\f15a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-file:before {
+  content: "\f15b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-file-text:before {
+  content: "\f15c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-alpha-asc:before {
+  content: "\f15d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-alpha-desc:before {
+  content: "\f15e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-amount-asc:before {
+  content: "\f160";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-amount-desc:before {
+  content: "\f161";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-numeric-asc:before {
+  content: "\f162";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sort-numeric-desc:before {
+  content: "\f163";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-thumbs-up:before {
+  content: "\f164";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-thumbs-down:before {
+  content: "\f165";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-youtube-square:before {
+  content: "\f166";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-youtube:before {
+  content: "\f167";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-xing:before {
+  content: "\f168";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-xing-square:before {
+  content: "\f169";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-youtube-play:before {
+  content: "\f16a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dropbox:before {
+  content: "\f16b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-flickr:before {
+  content: "\f16e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-adn:before {
+  content: "\f170";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bitbucket:before {
+  content: "\f171";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bitbucket-square:before {
+  content: "\f172";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tumblr:before {
+  content: "\f173";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-tumblr-square:before {
+  content: "\f174";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-long-arrow-down:before {
+  content: "\f175";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-long-arrow-up:before {
+  content: "\f176";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-long-arrow-right:before {
+  content: "\f178";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-apple:before {
+  content: "\f179";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-windows:before {
+  content: "\f17a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-android:before {
+  content: "\f17b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-linux:before {
+  content: "\f17c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dribbble:before {
+  content: "\f17d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-skype:before {
+  content: "\f17e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-foursquare:before {
+  content: "\f180";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-trello:before {
+  content: "\f181";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-female:before {
+  content: "\f182";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-male:before {
+  content: "\f183";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-gittip:before {
+  content: "\f184";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-sun-o:before {
+  content: "\f185";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-moon-o:before {
+  content: "\f186";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-archive:before {
+  content: "\f187";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-bug:before {
+  content: "\f188";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-vk:before {
+  content: "\f189";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-weibo:before {
+  content: "\f18a";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-renren:before {
+  content: "\f18b";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-pagelines:before {
+  content: "\f18c";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-stack-exchange:before {
+  content: "\f18d";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-arrow-circle-o-left:before {
+  content: "\f190";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-toggle-left:before, .fa-caret-square-o-left:before {
+  content: "\f191";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-dot-circle-o:before {
+  content: "\f192";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-wheelchair:before {
+  content: "\f193";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-vimeo-square:before {
+  content: "\f194";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-turkish-lira:before, .fa-try:before {
+  content: "\f195";
+}
+
+/* line 6, /home/danglienminh/railsProject/trungcapnghe1/app/assets/stylesheets/font-awesome.css.scss.erb */
+.fa-plus-square-o:before {
+  content: "\f196";
+}

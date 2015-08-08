@@ -1,0 +1,22 @@
+%header#head.secondary
+  .container
+    %h1{:style => "margin-top: 20px;"} TUYỂN DỤNG
+%section.container
+  .row{:style => "margin-top: 35px;"}
+    / main content
+    %aside.col-sm-12.sidebar.sidebar-right.box-shadow.box-radius
+      .panel
+        %ul.list-unstyled.list-spaces
+          - @posttd.each do |tt|
+            %li
+              = link_to truncate(tt.name,:length=>75),post_path(tt)
+              - if  tt.is_new?
+                %span.new_class
+            = image_tag tt.pic.url ,:class => "pic"
+            = tt.summary
+            %div{:style => "text-align: right;"}
+              = link_to "Chi Tiết ...",posts_show_path(:id=>tt.id)
+            %div{:style => "clear: both;"}
+            %h1{:style => "border-bottom: 1px dotted #ccc"}
+          .flickr_pagination
+            = will_paginate @posttd

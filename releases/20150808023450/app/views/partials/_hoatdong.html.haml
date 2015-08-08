@@ -1,0 +1,20 @@
+%section.news-box.top-margin
+  .container
+    %h2
+      %span HOẠT ĐỘNG
+    .slider
+      .pre-next-slide-hoat-dong
+        %a.sa-left{:href => "#"}
+          %i.fa.fa-chevron-left.fa-2x
+        %a.sa-right{:href => "#"}
+          %i.fa.fa-chevron-right.fa-2x
+      .clear-both
+      %ul.list-unstyled.video-list-thumbs.row
+        - all_video.each do |v|
+          %li.col-lg-4.col-md-4.col-sm-12
+            %a
+              .video-container
+                %object{:data => v.link, :type => "application/x-shockwave-flash"}
+                  %param{:name => "movie", :value => v.link}/
+                  %param{:name => "allowFullScreen", :value => "true"}
+              %h5= v.caption

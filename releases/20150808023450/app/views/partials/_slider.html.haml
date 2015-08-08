@@ -1,0 +1,8 @@
+%header#head
+  .container
+    .fluid_container
+      #camera_wrap.camera_wrap.camera_emboss.pattern_1
+        - all_slider.each do |s|
+          %div{"data-link" => s.link, "data-src" => image_url(s.picture.url), "data-target" => "_blank", "data-thumb" => image_url(s.picture.url(:thumb))}
+            .camera_caption= s.topcaption
+     

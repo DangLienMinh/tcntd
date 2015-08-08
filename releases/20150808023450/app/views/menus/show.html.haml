@@ -1,0 +1,18 @@
+%header#head.secondary
+  .container
+    %h1= @department.name
+    %p= @department.slogan
+%section.container{:style => "padding-top: 20px;"}
+  .row
+    %section.col-sm-8.maincontent
+      = raw @department.description
+    - @category.each do |cate|
+      %aside.col-sm-4.sidebar.sidebar-right.box-shadow.box-radius{:style => "margin-top: 30px;"}
+        - if !cate.posts.where("page_id=?",@department.id).empty?
+          .panel
+            %h4.tag-h4= cate.name
+            %ul.list-unstyled.list-spaces
+              - cate.posts.where("page_id=?",@department.id).each do |post|
+                %li
+                  = link_to post.name,post_path(post)
+                  %br

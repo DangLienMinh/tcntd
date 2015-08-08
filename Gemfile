@@ -51,15 +51,21 @@ platforms :mswin do
 end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'capistrano', '~> 3.1.0'
-gem 'capistrano-rvm'
+#gem 'capistrano', '~> 3.1.0'
+#gem 'capistrano-rvm'
 # rails specific capistrano funcitons
-gem 'capistrano-rails', '~> 1.1.0'
+#gem 'capistrano-rails', '~> 1.1.0'
 
 # integrate bundler with capistrano
-gem 'capistrano-bundler'
+#gem 'capistrano-bundler'
 # if you are using RBENV
-gem 'capistrano-rbenv', "~> 2.0" 
+#gem 'capistrano-rbenv', "~> 2.0" 
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails', group: :development
+end
 
 # Use the Unicorn app server
 group :development, :test do

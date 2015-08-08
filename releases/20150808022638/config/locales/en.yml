@@ -1,0 +1,119 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+# en:
+#   hello: "Hello world"
+en:
+  date:
+    formats:
+      long: "%d-%m-%Y"
+  time:
+    formats:
+      long: "%d-%m-%Y %H:%M:%S"
+  hello: "Hello world"
+  errors:
+    format: "%{message}"
+  formtastic:
+    :create: 'Tạo mới %{model}'
+    :update: 'Cập nhật %{model}'
+    :submit: 'Gửi %{model}'
+  activerecord:
+   attributes:
+    admin_user:
+     created_at: "Ngày tạo"
+     sign_in_count: "Số lần ĐN"
+     current_sign_in_at: "Ngày ĐN mới nhất"
+     page: "Phòng ban"
+     name: "Họ tên"
+    post:
+     created_at: "Ngày tạo"
+     category: "Loại bài viết"
+     page: "Phòng ban"
+     admin_user: "Tác gỉa"
+     name: "Tiêu đề"
+     content: "Nội dung"
+     updated_at: "Ngày cập nhật"
+    category:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+    page:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+     menu: "Phòng ban"
+    menu:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     updated_at: "Ngày cập nhật"
+     parent: "Menu cha"
+    slidercontent:
+     created_at: "Ngày tạo"
+     updated_at: "Ngày cập nhật"
+    contact:
+     created_at: "Ngày tạo"
+     name: "Tên"
+     phone: "Điện thoại"
+     subject: "Tiêu đề"
+    popup:
+      created_at: "Ngày tạo"
+    videohd:
+      created_at: "Ngày tạo"
+      caption: "Lời tựa"
+
+
+   models:
+    admin_user:
+     one: "Người dùng"
+     other: "Người dùng"
+    page:
+     one: "Trang"
+     other: "Trang"
+    category:
+     one: "Loại bài viết"
+     other: "Loại bài viết"
+    post:
+     one: "Bài viết"
+     other: "Bài viết"
+    slidercontent:
+     one: "Slider"
+     other: "Slider"
+    videohd:
+     one: "Video giới thiệu"
+     other: "Video giới thiệu"
+    contact:
+     one: "Liên hệ"
+     other: "Liên hệ"
+  
+
+  active_admin:
+    any: "Tất cả"
+    filters:
+      buttons:
+        filter: "Lọc thuộc tính"
+        clear: "Hủy"
+      predicates:
+        contains: "Chứa"
+        equals: "Giống với"
+        starts_with: "Bắt đầu bằng"
+        ends_with: "Kết thúc bằng"
+        greater_than: "Lớn hơn"
+        less_than: "Nhỏ hơn"
